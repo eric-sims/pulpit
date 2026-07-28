@@ -1,0 +1,48 @@
+## Xcode Build Artifacts
+build/
+DerivedData/
+
+## User Settings and State (Crucial to ignore to avoid merge conflicts)
+xcuserdata/
+*.xcuserdatad/
+*.xcuserstate
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+## Xcode Server & Cloud Blueprint
+*.xcscmblueprint
+*.xccheckout
+
+## Swift Package Manager (Ignore the build artifacts, keep the definition files)
+.build/
+# Per-user Xcode state for the package; Package.swift and Package.resolved stay tracked.
+.swiftpm/
+# Uncomment the line below if you want to cache SwiftPM dependencies locally instead of via git
+# Packages/
+
+## CocoaPods (Optional: Keep Podfile and Podfile.lock, ignore the local source files)
+# Pods/
+
+## Carthage
+Carthage/Build/
+
+## Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+## Diagnostics and Crash Logs
+*.crash
+*.ips
+*.dSYM
+
+## macOS System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## Claude Code — per-user local permissions, not shared project configuration
+.claude/settings.local.json

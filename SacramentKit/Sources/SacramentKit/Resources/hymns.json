@@ -1,0 +1,3672 @@
+{
+ "catalogVersion": 1,
+ "sourceNote": "Titles, numbers and section membership only. No lyrics or music.",
+ "verifiedOn": "2026-07-26",
+ "hymns": [
+  {
+   "book": "hymns1985",
+   "number": 1,
+   "title": "The Morning Breaks",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 2,
+   "title": "The Spirit of God",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 3,
+   "title": "Now Let Us Rejoice",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 4,
+   "title": "Truth Eternal",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 5,
+   "title": "High on the Mountain Top",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 6,
+   "title": "Redeemer of Israel",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 7,
+   "title": "Israel, Israel, God Is Calling",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 8,
+   "title": "Awake and Arise",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 9,
+   "title": "Come, Rejoice",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 10,
+   "title": "Come, Sing to the Lord",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 11,
+   "title": "What Was Witnessed in the Heavens?",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 12,
+   "title": "’Twas Witnessed in the Morning Sky",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 13,
+   "title": "An Angel from on High",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 14,
+   "title": "Sweet Is the Peace the Gospel Brings",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 15,
+   "title": "I Saw a Mighty Angel Fly",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 16,
+   "title": "What Glorious Scenes Mine Eyes Behold",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 17,
+   "title": "Awake, Ye Saints of God, Awake!",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 18,
+   "title": "The Voice of God Again Is Heard",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 19,
+   "title": "We Thank Thee, O God, for a Prophet",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 20,
+   "title": "God of Power, God of Right",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 21,
+   "title": "Come, Listen to a Prophet’s Voice",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 22,
+   "title": "We Listen to a Prophet’s Voice",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 23,
+   "title": "We Ever Pray for Thee",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 24,
+   "title": "God Bless Our Prophet Dear",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 25,
+   "title": "Now We’ll Sing with One Accord",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 26,
+   "title": "Joseph Smith’s First Prayer",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 27,
+   "title": "Praise to the Man",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 28,
+   "title": "Saints, Behold How Great Jehovah",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 29,
+   "title": "A Poor Wayfaring Man of Grief",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 30,
+   "title": "Come, Come, Ye Saints",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 31,
+   "title": "O God, Our Help in Ages Past",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 32,
+   "title": "The Happy Day at Last Has Come",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 33,
+   "title": "Our Mountain Home So Dear",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 34,
+   "title": "O Ye Mountains High",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 35,
+   "title": "For the Strength of the Hills",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 36,
+   "title": "They, the Builders of the Nation",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 37,
+   "title": "The Wintry Day, Descending to Its Close",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 38,
+   "title": "Come, All Ye Saints of Zion",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 39,
+   "title": "O Saints of Zion",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 40,
+   "title": "Arise, O Glorious Zion",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 41,
+   "title": "Let Zion in Her Beauty Rise",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 42,
+   "title": "Hail to the Brightness of Zion’s Glad Morning!",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 43,
+   "title": "Zion Stands with Hills Surrounded",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 44,
+   "title": "Beautiful Zion, Built Above",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 45,
+   "title": "Lead Me into Life Eternal",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 46,
+   "title": "Glorious Things of Thee Are Spoken",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 47,
+   "title": "We Will Sing of Zion",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 48,
+   "title": "Glorious Things Are Sung of Zion",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 49,
+   "title": "Adam-ondi-Ahman",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 50,
+   "title": "Come, Thou Glorious Day of Promise",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 51,
+   "title": "Sons of Michael, He Approaches",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 52,
+   "title": "The Day Dawn Is Breaking",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 53,
+   "title": "Let Earth’s Inhabitants Rejoice",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 54,
+   "title": "Behold, the Mountain of the Lord",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 55,
+   "title": "Lo, the Mighty God Appearing!",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 56,
+   "title": "Softly Beams the Sacred Dawning",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 57,
+   "title": "We’re Not Ashamed to Own Our Lord",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 58,
+   "title": "Come, Ye Children of the Lord",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 59,
+   "title": "Come, O Thou King of Kings",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 60,
+   "title": "Battle Hymn of the Republic",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 61,
+   "title": "Raise Your Voices to the Lord",
+   "sections": [
+    "restoration"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 62,
+   "title": "All Creatures of Our God and King",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 63,
+   "title": "Great King of Heaven",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 64,
+   "title": "On This Day of Joy and Gladness",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 65,
+   "title": "Come, All Ye Saints Who Dwell on Earth",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 66,
+   "title": "Rejoice, the Lord Is King!",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 67,
+   "title": "Glory to God on High",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 68,
+   "title": "A Mighty Fortress Is Our God",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 69,
+   "title": "All Glory, Laud, and Honor",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 70,
+   "title": "Sing Praise to Him",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 71,
+   "title": "With Songs of Praise",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 72,
+   "title": "Praise to the Lord, the Almighty",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 73,
+   "title": "Praise the Lord with Heart and Voice",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 74,
+   "title": "Praise Ye the Lord",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 75,
+   "title": "In Hymns of Praise",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 76,
+   "title": "God of Our Fathers, We Come unto Thee",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 77,
+   "title": "Great Is the Lord",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 78,
+   "title": "God of Our Fathers, Whose Almighty Hand",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 79,
+   "title": "With All the Power of Heart and Tongue",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 80,
+   "title": "God of Our Fathers, Known of Old",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 81,
+   "title": "Press Forward, Saints",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 82,
+   "title": "For All the Saints",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 83,
+   "title": "Guide Us, O Thou Great Jehovah",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 84,
+   "title": "Faith of Our Fathers",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 85,
+   "title": "How Firm a Foundation",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 86,
+   "title": "How Great Thou Art",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 87,
+   "title": "God Is Love",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 88,
+   "title": "Great God, Attend While Zion Sings",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 89,
+   "title": "The Lord Is My Light",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 90,
+   "title": "From All That Dwell below the Skies",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 91,
+   "title": "Father, Thy Children to Thee Now Raise",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 92,
+   "title": "For the Beauty of the Earth",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 93,
+   "title": "Prayer of Thanksgiving",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 94,
+   "title": "Come, Ye Thankful People",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 95,
+   "title": "Now Thank We All Our God",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 96,
+   "title": "Dearest Children, God Is Near You",
+   "sections": [
+    "praise"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 97,
+   "title": "Lead, Kindly Light",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 98,
+   "title": "I Need Thee Every Hour",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 99,
+   "title": "Nearer, Dear Savior, to Thee",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 100,
+   "title": "Nearer, My God, to Thee",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 101,
+   "title": "Guide Me to Thee",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 102,
+   "title": "Jesus, Lover of My Soul",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 103,
+   "title": "Precious Savior, Dear Redeemer",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 104,
+   "title": "Jesus, Savior, Pilot Me",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 105,
+   "title": "Master, the Tempest Is Raging",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 106,
+   "title": "God Speed the Right",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 107,
+   "title": "Lord, Accept Our True Devotion",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 108,
+   "title": "The Lord Is My Shepherd",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 109,
+   "title": "The Lord My Pasture Will Prepare",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 110,
+   "title": "Cast Thy Burden upon the Lord",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 111,
+   "title": "Rock of Ages",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 112,
+   "title": "Savior, Redeemer of My Soul",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 113,
+   "title": "Our Savior’s Love",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 114,
+   "title": "Come unto Him",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 115,
+   "title": "Come, Ye Disconsolate",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 116,
+   "title": "Come, Follow Me",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 117,
+   "title": "Come unto Jesus",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 118,
+   "title": "Ye Simple Souls Who Stray",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 119,
+   "title": "Come, We That Love the Lord",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 120,
+   "title": "Lean on My Ample Arm",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 121,
+   "title": "I’m a Pilgrim, I’m a Stranger",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 122,
+   "title": "Though Deepening Trials",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 123,
+   "title": "Oh, May My Soul Commune with Thee",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 124,
+   "title": "Be Still, My Soul",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 125,
+   "title": "How Gentle God’s Commands",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 126,
+   "title": "How Long, O Lord Most Holy and True",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 127,
+   "title": "Does the Journey Seem Long?",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 128,
+   "title": "When Faith Endures",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 129,
+   "title": "Where Can I Turn for Peace?",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 130,
+   "title": "Be Thou Humble",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 131,
+   "title": "More Holiness Give Me",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 132,
+   "title": "God Is in His Holy Temple",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 133,
+   "title": "Father in Heaven",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 134,
+   "title": "I Believe in Christ",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 135,
+   "title": "My Redeemer Lives",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 136,
+   "title": "I Know That My Redeemer Lives",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 137,
+   "title": "Testimony",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 138,
+   "title": "Bless Our Fast, We Pray",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 139,
+   "title": "In Fasting We Approach Thee",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 140,
+   "title": "Did You Think to Pray?",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 141,
+   "title": "Jesus, the Very Thought of Thee",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 142,
+   "title": "Sweet Hour of Prayer",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 143,
+   "title": "Let the Holy Spirit Guide",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 144,
+   "title": "Secret Prayer",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 145,
+   "title": "Prayer Is the Soul’s Sincere Desire",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 146,
+   "title": "Gently Raise the Sacred Strain",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 147,
+   "title": "Sweet Is the Work",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 148,
+   "title": "Sabbath Day",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 149,
+   "title": "As the Dew from Heaven Distilling",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 150,
+   "title": "O Thou Kind and Gracious Father",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 151,
+   "title": "We Meet, Dear Lord",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 152,
+   "title": "God Be with You Till We Meet Again",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 153,
+   "title": "Lord, We Ask Thee Ere We Part",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 154,
+   "title": "Father, This Hour Has Been One of Joy",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 155,
+   "title": "We Have Partaken of Thy Love",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 156,
+   "title": "Sing We Now at Parting",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 157,
+   "title": "Thy Spirit, Lord, Has Stirred Our Souls",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 158,
+   "title": "Before Thee, Lord, I Bow My Head",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 159,
+   "title": "Now the Day Is Over",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 160,
+   "title": "Softly Now the Light of Day",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 161,
+   "title": "The Lord Be with Us",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 162,
+   "title": "Lord, We Come before Thee Now",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 163,
+   "title": "Lord, Dismiss Us with Thy Blessing",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 164,
+   "title": "Great God, to Thee My Evening Song",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 165,
+   "title": "Abide with Me; ’Tis Eventide",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 166,
+   "title": "Abide with Me!",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 167,
+   "title": "Come, Let Us Sing an Evening Hymn",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 168,
+   "title": "As the Shadows Fall",
+   "sections": [
+    "prayer"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 169,
+   "title": "As Now We Take the Sacrament",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 170,
+   "title": "God, Our Father, Hear Us Pray",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 171,
+   "title": "With Humble Heart",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 172,
+   "title": "In Humility, Our Savior",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 173,
+   "title": "While of These Emblems We Partake",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 174,
+   "title": "While of These Emblems We Partake",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 175,
+   "title": "O God, the Eternal Father",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 176,
+   "title": "’Tis Sweet to Sing the Matchless Love",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 177,
+   "title": "’Tis Sweet to Sing the Matchless Love",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 178,
+   "title": "O Lord of Hosts",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 179,
+   "title": "Again, Our Dear Redeeming Lord",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 180,
+   "title": "Father in Heaven, We Do Believe",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 181,
+   "title": "Jesus of Nazareth, Savior and King",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 182,
+   "title": "We’ll Sing All Hail to Jesus’ Name",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 183,
+   "title": "In Remembrance of Thy Suffering",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 184,
+   "title": "Upon the Cross of Calvary",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 185,
+   "title": "Reverently and Meekly Now",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 186,
+   "title": "Again We Meet around the Board",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 187,
+   "title": "God Loved Us, So He Sent His Son",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 188,
+   "title": "Thy Will, O Lord, Be Done",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 189,
+   "title": "O Thou, Before the World Began",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 190,
+   "title": "In Memory of the Crucified",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 191,
+   "title": "Behold the Great Redeemer Die",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 192,
+   "title": "He Died! The Great Redeemer Died",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 193,
+   "title": "I Stand All Amazed",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 194,
+   "title": "There Is a Green Hill Far Away",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 195,
+   "title": "How Great the Wisdom and the Love",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 196,
+   "title": "Jesus, Once of Humble Birth",
+   "sections": [
+    "sacrament"
+   ],
+   "sacramentSuitability": "yes"
+  },
+  {
+   "book": "hymns1985",
+   "number": 197,
+   "title": "O Savior, Thou Who Wearest a Crown",
+   "sections": [
+    "easter"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 198,
+   "title": "That Easter Morn",
+   "sections": [
+    "easter"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 199,
+   "title": "He Is Risen!",
+   "sections": [
+    "easter"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 200,
+   "title": "Christ the Lord Is Risen Today",
+   "sections": [
+    "easter"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 201,
+   "title": "Joy to the World",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 202,
+   "title": "Oh, Come, All Ye Faithful",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 203,
+   "title": "Angels We Have Heard on High",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 204,
+   "title": "Silent Night",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 205,
+   "title": "Once in Royal David’s City",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 206,
+   "title": "Away in a Manger",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 207,
+   "title": "It Came upon the Midnight Clear",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 208,
+   "title": "O Little Town of Bethlehem",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 209,
+   "title": "Hark! The Herald Angels Sing",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 210,
+   "title": "With Wondering Awe",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 211,
+   "title": "While Shepherds Watched Their Flocks",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 212,
+   "title": "Far, Far Away on Judea’s Plains",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 213,
+   "title": "The First Noel",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 214,
+   "title": "I Heard the Bells on Christmas Day",
+   "sections": [
+    "christmas"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 215,
+   "title": "Ring Out, Wild Bells",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 216,
+   "title": "We Are Sowing",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 217,
+   "title": "Come, Let Us Anew",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 218,
+   "title": "We Give Thee But Thine Own",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 219,
+   "title": "Because I Have Been Given Much",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 220,
+   "title": "Lord, I Would Follow Thee",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 221,
+   "title": "Dear to the Heart of the Shepherd",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 222,
+   "title": "Hear Thou Our Hymn, O Lord",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 223,
+   "title": "Have I Done Any Good?",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 224,
+   "title": "I Have Work Enough to Do",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 225,
+   "title": "We Are Marching On to Glory",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 226,
+   "title": "Improve the Shining Moments",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 227,
+   "title": "There Is Sunshine in My Soul Today",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 228,
+   "title": "You Can Make the Pathway Bright",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 229,
+   "title": "Today, While the Sun Shines",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 230,
+   "title": "Scatter Sunshine",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 231,
+   "title": "Father, Cheer Our Souls Tonight",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 232,
+   "title": "Let Us Oft Speak Kind Words",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 233,
+   "title": "Nay, Speak No Ill",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 234,
+   "title": "Jesus, Mighty King in Zion",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 235,
+   "title": "Should You Feel Inclined to Censure",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 236,
+   "title": "Lord, Accept into Thy Kingdom",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 237,
+   "title": "Do What Is Right",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 238,
+   "title": "Behold Thy Sons and Daughters, Lord",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 239,
+   "title": "Choose the Right",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 240,
+   "title": "Know This, That Every Soul Is Free",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 241,
+   "title": "Count Your Blessings",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 242,
+   "title": "Praise God, from Whom All Blessings Flow",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 243,
+   "title": "Let Us All Press On",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 244,
+   "title": "Come Along, Come Along",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 245,
+   "title": "This House We Dedicate to Thee",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 246,
+   "title": "Onward, Christian Soldiers",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 247,
+   "title": "We Love Thy House, O God",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 248,
+   "title": "Up, Awake, Ye Defenders of Zion",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 249,
+   "title": "Called to Serve",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 250,
+   "title": "We Are All Enlisted",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 251,
+   "title": "Behold! A Royal Army",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 252,
+   "title": "Put Your Shoulder to the Wheel",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 253,
+   "title": "Like Ten Thousand Legions Marching",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 254,
+   "title": "True to the Faith",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 255,
+   "title": "Carry On",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 256,
+   "title": "As Zion’s Youth in Latter Days",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 257,
+   "title": "Rejoice! A Glorious Sound Is Heard",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 258,
+   "title": "O Thou Rock of Our Salvation",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 259,
+   "title": "Hope of Israel",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 260,
+   "title": "Who’s on the Lord’s Side?",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 261,
+   "title": "Thy Servants Are Prepared",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 262,
+   "title": "Go, Ye Messengers of Glory",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 263,
+   "title": "Go Forth with Faith",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 264,
+   "title": "Hark, All Ye Nations!",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 265,
+   "title": "Arise, O God, and Shine",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 266,
+   "title": "The Time Is Far Spent",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 267,
+   "title": "How Wondrous and Great",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 268,
+   "title": "Come, All Whose Souls Are Lighted",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 269,
+   "title": "Jehovah, Lord of Heaven and Earth",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 270,
+   "title": "I’ll Go Where You Want Me to Go",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 271,
+   "title": "Oh, Holy Words of Truth and Love",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 272,
+   "title": "Oh Say, What Is Truth?",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 273,
+   "title": "Truth Reflects upon Our Senses",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 274,
+   "title": "The Iron Rod",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 275,
+   "title": "Men Are That They Might Have Joy",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 276,
+   "title": "Come Away to the Sunday School",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 277,
+   "title": "As I Search the Holy Scriptures",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 278,
+   "title": "Thanks for the Sabbath School",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 279,
+   "title": "Thy Holy Word",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 280,
+   "title": "Welcome, Welcome, Sabbath Morning",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 281,
+   "title": "Help Me Teach with Inspiration",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 282,
+   "title": "We Meet Again in Sabbath School",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 283,
+   "title": "The Glorious Gospel Light Has Shone",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 284,
+   "title": "If You Could Hie to Kolob",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 285,
+   "title": "God Moves in a Mysterious Way",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 286,
+   "title": "Oh, What Songs of the Heart",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 287,
+   "title": "Rise, Ye Saints, and Temples Enter",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 288,
+   "title": "How Beautiful Thy Temples, Lord",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 289,
+   "title": "Holy Temples on Mount Zion",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 290,
+   "title": "Rejoice, Ye Saints of Latter Days",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 291,
+   "title": "Turn Your Hearts",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 292,
+   "title": "O My Father",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 293,
+   "title": "Each Life That Touches Ours for Good",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 294,
+   "title": "Love at Home",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 295,
+   "title": "O Love That Glorifies the Son",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 296,
+   "title": "Our Father, by Whose Name",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 297,
+   "title": "From Homes of Saints Glad Songs Arise",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 298,
+   "title": "Home Can Be a Heaven on Earth",
+   "sections": [
+    "specialTopics"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 299,
+   "title": "Children of Our Heavenly Father",
+   "sections": [
+    "childrensSongs"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 300,
+   "title": "Families Can Be Together Forever",
+   "sections": [
+    "childrensSongs"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 301,
+   "title": "I Am a Child of God",
+   "sections": [
+    "childrensSongs"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 302,
+   "title": "I Know My Father Lives",
+   "sections": [
+    "childrensSongs"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 303,
+   "title": "Keep the Commandments",
+   "sections": [
+    "childrensSongs"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 304,
+   "title": "Teach Me to Walk in the Light",
+   "sections": [
+    "childrensSongs"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 305,
+   "title": "The Light Divine",
+   "sections": [
+    "childrensSongs"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 306,
+   "title": "God’s Daily Care",
+   "sections": [
+    "childrensSongs"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 307,
+   "title": "In Our Lovely Deseret",
+   "sections": [
+    "childrensSongs"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 308,
+   "title": "Love One Another",
+   "sections": [
+    "childrensSongs"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 309,
+   "title": "As Sisters in Zion",
+   "sections": [
+    "forWomen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 310,
+   "title": "A Key Was Turned in Latter Days",
+   "sections": [
+    "forWomen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 311,
+   "title": "We Meet Again as Sisters",
+   "sections": [
+    "forWomen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 312,
+   "title": "We Ever Pray for Thee",
+   "sections": [
+    "forWomen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 313,
+   "title": "God Is Love",
+   "sections": [
+    "forWomen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 314,
+   "title": "How Gentle God’s Commands",
+   "sections": [
+    "forWomen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 315,
+   "title": "Jesus, the Very Thought of Thee",
+   "sections": [
+    "forWomen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 316,
+   "title": "The Lord Is My Shepherd",
+   "sections": [
+    "forWomen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 317,
+   "title": "Sweet Is the Work",
+   "sections": [
+    "forWomen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 318,
+   "title": "Love at Home",
+   "sections": [
+    "forWomen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 319,
+   "title": "Ye Elders of Israel",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 320,
+   "title": "The Priesthood of Our Lord",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 321,
+   "title": "Ye Who Are Called to Labor",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 322,
+   "title": "Come, All Ye Sons of God",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 323,
+   "title": "Rise Up, O Men of God",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 324,
+   "title": "Rise Up, O Men of God",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 325,
+   "title": "See the Mighty Priesthood Gathered",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 326,
+   "title": "Come, Come, Ye Saints",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 327,
+   "title": "Go, Ye Messengers of Heaven",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 328,
+   "title": "An Angel from on High",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 329,
+   "title": "Thy Servants Are Prepared",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 330,
+   "title": "See, the Mighty Angel Flying",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 331,
+   "title": "Oh Say, What Is Truth?",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 332,
+   "title": "Come, O Thou King of Kings",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 333,
+   "title": "High on the Mountain Top",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 334,
+   "title": "I Need Thee Every Hour",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 335,
+   "title": "Brightly Beams Our Father’s Mercy",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 336,
+   "title": "School Thy Feelings",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 337,
+   "title": "O Home Beloved",
+   "sections": [
+    "forMen"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 338,
+   "title": "America the Beautiful",
+   "sections": [
+    "patriotic"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 339,
+   "title": "My Country, ’Tis of Thee",
+   "sections": [
+    "patriotic"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 340,
+   "title": "The Star-Spangled Banner",
+   "sections": [
+    "patriotic"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "hymns1985",
+   "number": 341,
+   "title": "God Save the King",
+   "sections": [
+    "patriotic"
+   ],
+   "sacramentSuitability": "no"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1001,
+   "title": "Come, Thou Fount of Every Blessing",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1002,
+   "title": "When the Savior Comes Again",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1003,
+   "title": "It Is Well with My Soul",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1004,
+   "title": "I Will Walk with Jesus",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1005,
+   "title": "His Eye Is on the Sparrow",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1006,
+   "title": "Think a Sacred Song",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1007,
+   "title": "As Bread Is Broken",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1008,
+   "title": "Bread of Life, Living Water",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1009,
+   "title": "Gethsemane",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1010,
+   "title": "Amazing Grace",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 September 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1011,
+   "title": "Holding Hands Around the World",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 September 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1012,
+   "title": "Anytime, Anywhere",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 September 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1013,
+   "title": "God’s Gracious Love",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 September 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1014,
+   "title": "My Shepherd Will Supply My Need",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 September 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1015,
+   "title": "Oh, the Deep, Deep Love of Jesus",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 September 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1016,
+   "title": "Behold the Wounds in Jesus’ Hands",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 September 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1017,
+   "title": "This Is the Christ",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 September 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1018,
+   "title": "Come, Lord Jesus",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 September 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1019,
+   "title": "To Love like Thee",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1020,
+   "title": "Softly and Tenderly Jesus Is Calling",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1021,
+   "title": "I Know That My Savior Loves Me",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1022,
+   "title": "Faith in Every Footstep",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1023,
+   "title": "Standing on the Promises",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1024,
+   "title": "I Have Faith in the Lord Jesus Christ",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1025,
+   "title": "Take My Heart and Let It Be Consecrated",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1026,
+   "title": "Holy Places",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1027,
+   "title": "Welcome Home",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1028,
+   "title": "This Little Light of Mine",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1029,
+   "title": "I Can’t Count Them All",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1030,
+   "title": "Close as a Quiet Prayer",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1031,
+   "title": "Come, Hear the Word the Lord Has Spoken",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1032,
+   "title": "Look unto Christ",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 June 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1033,
+   "title": "Oh, How Great Is Our Joy",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 June 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1034,
+   "title": "I’m a Pioneer Too",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 June 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1035,
+   "title": "As I Keep the Sabbath Day",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 June 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1036,
+   "title": "Read the Book of Mormon and Pray",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 June 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1037,
+   "title": "I’m Gonna Live So God Can Use Me",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 June 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1038,
+   "title": "The Lord’s My Shepherd",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 June 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1039,
+   "title": "Because",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 June 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1040,
+   "title": "His Voice as the Sound",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 June 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1041,
+   "title": "O Lord, Who Gave Thy Life for Me",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "12 June 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1042,
+   "title": "Thou Gracious God, Whose Mercy Lends",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1043,
+   "title": "Help Us Remember",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1044,
+   "title": "How Did the Savior Minister?",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1045,
+   "title": "Jesus Is the Way",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1046,
+   "title": "Can You Count the Stars in Heaven?",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1047,
+   "title": "He Cares for Me",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1048,
+   "title": "Our Prayer to Thee",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1049,
+   "title": "Joseph Prayed in Faith",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1050,
+   "title": "Stand by Me",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1051,
+   "title": "This Day Is a Good Day, Lord",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1052,
+   "title": "Joyfully Bound",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1053,
+   "title": "My Covenants",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1054,
+   "title": "When I Am Baptized",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1055,
+   "title": "The Power of the Holy Ghost",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1056,
+   "title": "Elijah and the Still, Small Voice",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1057,
+   "title": "Jesus Is My Shepherd",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1058,
+   "title": "My Song in the Night",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1059,
+   "title": "This Is My Father’s World",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1060,
+   "title": "Build an Ark",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1061,
+   "title": "Love Will Bless Our Home",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1062,
+   "title": "Lord, Accept Our Humble Fast",
+   "sections": [],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1201,
+   "title": "Hail the Day That Sees Him Rise",
+   "sections": [
+    "seasonal"
+   ],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1202,
+   "title": "He Is Born, the Divine Christ Child",
+   "sections": [
+    "seasonal"
+   ],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1203,
+   "title": "What Child Is This?",
+   "sections": [
+    "seasonal"
+   ],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1204,
+   "title": "Star Bright",
+   "sections": [
+    "seasonal"
+   ],
+   "sacramentSuitability": "unknown",
+   "released": "30 May 2024"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1205,
+   "title": "Let Easter Anthems Ring",
+   "sections": [
+    "seasonal"
+   ],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1206,
+   "title": "Were You There?",
+   "sections": [
+    "seasonal"
+   ],
+   "sacramentSuitability": "unknown",
+   "released": "13 February 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1207,
+   "title": "Still, Still, Still",
+   "sections": [
+    "seasonal"
+   ],
+   "sacramentSuitability": "unknown",
+   "released": "12 June 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1208,
+   "title": "Go Tell It on the Mountain",
+   "sections": [
+    "seasonal"
+   ],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1209,
+   "title": "Little Baby in a Manger",
+   "sections": [
+    "seasonal"
+   ],
+   "sacramentSuitability": "unknown",
+   "released": "18 September 2025"
+  },
+  {
+   "book": "homeAndChurch",
+   "number": 1210,
+   "title": "Long Ago, Within a Garden",
+   "sections": [
+    "seasonal"
+   ],
+   "sacramentSuitability": "unknown",
+   "released": "26 February 2026"
+  }
+ ]
+}
