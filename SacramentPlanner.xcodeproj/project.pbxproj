@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A58C2AD5301F025800D2BF63 /* pulpit 2.icon in Resources */ = {isa = PBXBuildFile; fileRef = A58C2AD4301F025800D2BF63 /* pulpit 2.icon */; };
 		AA000000000000000000000C /* SacramentKit in Frameworks */ = {isa = PBXBuildFile; productRef = AA000000000000000000000B /* SacramentKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A58C2AD4301F025800D2BF63 /* pulpit 2.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "pulpit 2.icon"; sourceTree = "<group>"; };
 		AA0000000000000000000005 /* SacramentPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SacramentPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -37,6 +39,7 @@
 		AA0000000000000000000002 = {
 			isa = PBXGroup;
 			children = (
+				A58C2AD4301F025800D2BF63 /* pulpit 2.icon */,
 				AA0000000000000000000009 /* SacramentPlanner */,
 				AA0000000000000000000003 /* Products */,
 			);
@@ -118,6 +121,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58C2AD5301F025800D2BF63 /* pulpit 2.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +254,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -278,6 +283,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

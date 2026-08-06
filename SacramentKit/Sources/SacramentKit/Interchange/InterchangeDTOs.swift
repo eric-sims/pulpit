@@ -16,6 +16,8 @@ public struct PersonDTO: Codable, Sendable, Hashable {
     public var id: UUID
     public var fullName: String
     public var preferredName: String?
+    /// "President", "Bishop", "Elder" — outranks the Brother/Sister form of address.
+    public var title: String?
     public var phoneticSpelling: String?
     public var pronouns: String
 
@@ -23,12 +25,14 @@ public struct PersonDTO: Codable, Sendable, Hashable {
         id: UUID = UUID(),
         fullName: String,
         preferredName: String? = nil,
+        title: String? = nil,
         phoneticSpelling: String? = nil,
-        pronouns: String = PronounSet.they.rawValue
+        pronouns: String = PronounSet.he.rawValue
     ) {
         self.id = id
         self.fullName = fullName
         self.preferredName = preferredName
+        self.title = title
         self.phoneticSpelling = phoneticSpelling
         self.pronouns = pronouns
     }
@@ -38,9 +42,10 @@ public struct PersonDTO: Codable, Sendable, Hashable {
         id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
         fullName = try container.decodeIfPresent(String.self, forKey: .fullName) ?? ""
         preferredName = try container.decodeIfPresent(String.self, forKey: .preferredName)
+        title = try container.decodeIfPresent(String.self, forKey: .title)
         phoneticSpelling = try container.decodeIfPresent(String.self, forKey: .phoneticSpelling)
         pronouns = try container.decodeIfPresent(String.self, forKey: .pronouns)
-            ?? PronounSet.they.rawValue
+            ?? PronounSet.he.rawValue
     }
 
     public var pronounSet: PronounSet { PronounSet(tolerant: pronouns) }
@@ -49,6 +54,7 @@ public struct PersonDTO: Codable, Sendable, Hashable {
         ScriptPerson(
             fullName: fullName,
             preferredName: preferredName,
+            title: title,
             phoneticSpelling: phoneticSpelling,
             pronouns: pronounSet
         )
@@ -62,6 +68,10 @@ public struct AssignmentDTO: Codable, Sendable, Hashable {
     /// For visitors and missionaries, who don't belong in a ward roster.
     public var displayNameOverride: String?
     public var topic: String?
+    /// The calling travels with the person, not the item: one sustaining covers several people in
+    /// several different callings, read in turn before a single vote.
+    public var callingText: String?
+    public var officeText: String?
     public var status: String
     /// Private: stripped when private notes are excluded from an export.
     public var statusNote: String?
@@ -73,6 +83,8 @@ public struct AssignmentDTO: Codable, Sendable, Hashable {
         person: PersonDTO? = nil,
         displayNameOverride: String? = nil,
         topic: String? = nil,
+        callingText: String? = nil,
+        officeText: String? = nil,
         status: AssignmentStatus = .unassigned,
         statusNote: String? = nil,
         order: Int = 0
@@ -82,6 +94,8 @@ public struct AssignmentDTO: Codable, Sendable, Hashable {
         self.person = person
         self.displayNameOverride = displayNameOverride
         self.topic = topic
+        self.callingText = callingText
+        self.officeText = officeText
         self.status = status.rawValue
         self.statusNote = statusNote
         self.order = order
@@ -94,6 +108,8 @@ public struct AssignmentDTO: Codable, Sendable, Hashable {
         person = try container.decodeIfPresent(PersonDTO.self, forKey: .person)
         displayNameOverride = try container.decodeIfPresent(String.self, forKey: .displayNameOverride)
         topic = try container.decodeIfPresent(String.self, forKey: .topic)
+        callingText = try container.decodeIfPresent(String.self, forKey: .callingText)
+        officeText = try container.decodeIfPresent(String.self, forKey: .officeText)
         status = try container.decodeIfPresent(String.self, forKey: .status) ?? AssignmentStatus.unassigned.rawValue
         statusNote = try container.decodeIfPresent(String.self, forKey: .statusNote)
         order = try container.decodeIfPresent(Int.self, forKey: .order) ?? 0
@@ -160,6 +176,10 @@ public struct ProgramItemDTO: Codable, Sendable, Hashable {
     public var hymnBook: String?
     public var hymnNumber: Int?
     public var scriptOverride: String?
+    /// Whether this is a slot someone is expected to fill. Travels with the item so the recipient
+    /// sees the same "still to fill" count the sender did, rather than an empty meeting that
+    /// claims to be ready.
+    public var needsFilling: Bool
     public var assignments: [AssignmentDTO]
     public var entries: [ItemEntryDTO]
     public var detail: ItemDetailDTO?
@@ -174,6 +194,7 @@ public struct ProgramItemDTO: Codable, Sendable, Hashable {
         hymnBook: HymnBook? = nil,
         hymnNumber: Int? = nil,
         scriptOverride: String? = nil,
+        needsFilling: Bool = false,
         assignments: [AssignmentDTO] = [],
         entries: [ItemEntryDTO] = [],
         detail: ItemDetailDTO? = nil
@@ -187,6 +208,7 @@ public struct ProgramItemDTO: Codable, Sendable, Hashable {
         self.hymnBook = hymnBook?.rawValue
         self.hymnNumber = hymnNumber
         self.scriptOverride = scriptOverride
+        self.needsFilling = needsFilling
         self.assignments = assignments
         self.entries = entries
         self.detail = detail
@@ -203,6 +225,7 @@ public struct ProgramItemDTO: Codable, Sendable, Hashable {
         hymnBook = try container.decodeIfPresent(String.self, forKey: .hymnBook)
         hymnNumber = try container.decodeIfPresent(Int.self, forKey: .hymnNumber)
         scriptOverride = try container.decodeIfPresent(String.self, forKey: .scriptOverride)
+        needsFilling = try container.decodeIfPresent(Bool.self, forKey: .needsFilling) ?? false
         assignments = try container.decodeIfPresent([AssignmentDTO].self, forKey: .assignments) ?? []
         entries = try container.decodeIfPresent([ItemEntryDTO].self, forKey: .entries) ?? []
         detail = try container.decodeIfPresent(ItemDetailDTO.self, forKey: .detail)

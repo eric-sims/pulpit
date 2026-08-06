@@ -162,6 +162,12 @@ struct ScriptTemplateEditor: View {
 
 struct SettingsView: View {
     @AppStorage(Preferences.unitNameKey) private var unitName = ""
+    @Query(sort: \Meeting.date) private var meetings: [Meeting]
+    @Query private var announcements: [Announcement]
+    @Query private var templates: [ScriptTemplate]
+
+    @State private var exported: ExportedFile?
+    @State private var errorMessage: String?
 
     var body: some View {
         NavigationStack {
@@ -175,6 +181,15 @@ struct SettingsView: View {
                 }
 
                 Section {
+                    Button("Export All Meetings", systemImage: "arrow.down.doc") { exportBackup() }
+                        .disabled(meetings.isEmpty)
+                } header: {
+                    Text("Backup")
+                } footer: {
+                    Text("Everything in one file: \(meetings.count) meeting\(meetings.count == 1 ? "" : "s"), your announcements and your scripts. Meetings live only on this device, so this is your only copy off it.")
+                }
+
+                Section {
                     LabeledContent("Hymns (1985)", value: "341")
                     LabeledContent("Hymns—For Home and Church", value: "\(HymnCatalog.shared.hymns(in: .homeAndChurch).count)")
                     LabeledContent("Verified", value: HymnCatalog.shared.verifiedOn)
@@ -185,6 +200,26 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("Settings")
+            .sheet(item: $exported) { ShareSheet(url: $0.url) }
+            .alert("Export Failed", isPresented: .constant(errorMessage != nil)) {
+                Button("OK") { errorMessage = nil }
+            } message: {
+                Text(errorMessage ?? "")
+            }
+        }
+    }
+
+    private func exportBackup() {
+        do {
+            exported = ExportedFile(
+                url: try ExportService.backupFile(
+                    meetings: meetings,
+                    announcements: announcements,
+                    templates: templates
+                )
+            )
+        } catch {
+            errorMessage = error.localizedDescription
         }
     }
 }

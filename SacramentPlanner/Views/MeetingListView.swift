@@ -1,11 +1,19 @@
 import SacramentKit
 import SwiftData
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct MeetingListView: View {
     @Environment(\.modelContext) private var context
+    @Environment(ImportInbox.self) private var inbox
     @Query(sort: \Meeting.date, order: .reverse) private var meetings: [Meeting]
     @State private var isCreatingMeeting = false
+    @State private var isPickingFile = false
+
+    /// Falls back to plain JSON so a file that lost its extension in transit can still be picked.
+    private var importableTypes: [UTType] {
+        [UTType(Interchange.typeIdentifier), .json].compactMap(\.self)
+    }
 
     private var upcoming: [Meeting] {
         // Everything from the start of today onwards, oldest first, so the next meeting is first.
@@ -52,9 +60,21 @@ struct MeetingListView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Plan a Meeting", systemImage: "plus") { isCreatingMeeting = true }
                 }
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Import", systemImage: "square.and.arrow.down") { isPickingFile = true }
+                }
             }
             .sheet(isPresented: $isCreatingMeeting) {
                 NewMeetingWizard()
+            }
+            .fileImporter(
+                isPresented: $isPickingFile,
+                allowedContentTypes: importableTypes
+            ) { outcome in
+                switch outcome {
+                case .success(let url): inbox.accept(url)
+                case .failure(let error): inbox.errorMessage = error.localizedDescription
+                }
             }
         }
     }

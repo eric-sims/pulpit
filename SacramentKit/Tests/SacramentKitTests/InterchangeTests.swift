@@ -8,7 +8,7 @@ import Testing
 private let fixedDate = Date(timeIntervalSince1970: 1_785_000_000)
 
 private func sampleMeeting() -> MeetingDTO {
-    let bishop = PersonDTO(fullName: "David Larsen", pronouns: PronounSet.he.rawValue)
+    let bishop = PersonDTO(fullName: "David Larsen", title: "Bishop", pronouns: PronounSet.he.rawValue)
     let speaker = PersonDTO(fullName: "Jane Doe", phoneticSpelling: "DOH", pronouns: PronounSet.she.rawValue)
 
     return MeetingDTO(
@@ -32,14 +32,20 @@ private func sampleMeeting() -> MeetingDTO {
                 order: 1,
                 kind: .openingHymn,
                 hymnBook: .hymns1985,
-                hymnNumber: 2
+                hymnNumber: 2,
+                needsFilling: true
             ),
             ProgramItemDTO(
                 order: 2,
                 kind: .release,
                 status: .completed,
                 assignments: [
-                    AssignmentDTO(role: .subject, person: bishop, status: .confirmed)
+                    AssignmentDTO(
+                        role: .subject,
+                        person: bishop,
+                        callingText: "Ward Clerk",
+                        status: .confirmed
+                    )
                 ],
                 detail: ItemDetailDTO(calling: "Ward Clerk")
             ),
@@ -133,6 +139,22 @@ struct InterchangePrivacyTests {
         #expect(meeting.items.flatMap(\.assignments).allSatisfy { $0.statusNote == nil })
         #expect(result.document.includesPrivateNotes == false)
         #expect(result.notes.contains(.privateNotesExcluded))
+    }
+
+    @Test("Titles and per-person callings survive the trip")
+    func lateAddedFieldsRoundTrip() throws {
+        let data = try Interchange.encode(meeting: sampleMeeting(), includePrivateNotes: true)
+        let meeting = try Interchange.decodeMeeting(data).document.meeting
+
+        let release = meeting.items.first { $0.itemKind == .release }
+        let subject = release?.assignments.first
+
+        // Without this the recipient sees an empty meeting that claims to be ready.
+        #expect(meeting.items.first { $0.itemKind == .openingHymn }?.needsFilling == true)
+        #expect(subject?.callingText == "Ward Clerk")
+        #expect(subject?.person?.title == "Bishop")
+        // And the title is what a script would address them by.
+        #expect(subject?.person?.scriptPerson.addressedName == "Bishop David Larsen")
     }
 
     @Test("Redaction keeps everything that isn't private")

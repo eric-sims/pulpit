@@ -42,7 +42,27 @@ enum Preferences {
 }
 
 struct RootView: View {
+    @State private var inbox = ImportInbox()
+
     var body: some View {
+        tabs
+            .environment(inbox)
+            // A .sacramentplan opened from Messages, AirDrop or Files lands here and goes through
+            // the same preview as one picked from the file browser.
+            .onOpenURL { inbox.accept($0) }
+            .sheet(isPresented: $inbox.isShowingPreview) {
+                if let pending = inbox.pending {
+                    ImportPreviewView(result: pending)
+                }
+            }
+            .alert("Couldn't Open File", isPresented: .constant(inbox.errorMessage != nil)) {
+                Button("OK") { inbox.errorMessage = nil }
+            } message: {
+                Text(inbox.errorMessage ?? "")
+            }
+    }
+
+    private var tabs: some View {
         TabView {
             Tab("Meetings", systemImage: "list.bullet.rectangle.portrait") {
                 MeetingListView()

@@ -10,6 +10,7 @@ struct MeetingOutlineView: View {
     @State private var isAddingItem = false
     @State private var editingItem: ProgramItem?
     @State private var isConducting = false
+    @State private var isExporting = false
 
     var body: some View {
         List {
@@ -68,7 +69,13 @@ struct MeetingOutlineView: View {
         .navigationTitle(meeting.date.formatted(.dateTime.month().day().year()))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("Export", systemImage: "square.and.arrow.up") { isExporting = true }
+            }
             ToolbarItem(placement: .topBarTrailing) { EditButton() }
+        }
+        .sheet(isPresented: $isExporting) {
+            ExportView(meeting: meeting)
         }
         .sheet(isPresented: $isAddingItem) {
             AddItemSheet(meeting: meeting)

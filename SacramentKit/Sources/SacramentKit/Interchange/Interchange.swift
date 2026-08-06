@@ -134,7 +134,9 @@ public enum Interchange {
         return "\(sanitized(name)).\(fileExtension)"
     }
 
-    static func sanitized(_ name: String) -> String {
+    /// Strips characters that aren't legal in a filename, so an odd ward name can't produce a
+    /// path the file system rejects.
+    public static func sanitized(_ name: String) -> String {
         let illegal = CharacterSet(charactersIn: "/\\:*?\"<>|")
         return name.components(separatedBy: illegal).joined(separator: "-")
     }
@@ -187,7 +189,8 @@ public enum RosterMatcher {
         }
     }
 
-    static func normalize(_ name: String) -> String {
+    /// Case- and whitespace-insensitive form used to compare two names.
+    public static func normalize(_ name: String) -> String {
         name.trimmingCharacters(in: .whitespacesAndNewlines)
             .lowercased()
             .components(separatedBy: .whitespaces)
