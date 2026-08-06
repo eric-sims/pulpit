@@ -30,10 +30,11 @@
             {
               "appearance" : "tinted",
               "value" : {
-                "solid" : "display-p3:0.00000,0.00000,0.00000,1.00000"
+                "solid" : "srgb:1.00000,1.00000,1.00000,1.00000"
               }
             }
           ],
+          "glass" : true,
           "hidden" : false,
           "image-name" : "untitled-2.svg",
           "name" : "untitled-2",
