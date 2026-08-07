@@ -198,6 +198,18 @@ struct SettingsView: View {
                 } footer: {
                     Text("Titles, numbers and sections only. No lyrics or music.")
                 }
+
+                Section {
+                    LabeledContent("App version", value: AppVersion.displayVersion)
+                    if let commit = AppVersion.commit {
+                        LabeledContent("Commit", value: commit)
+                    }
+                } header: {
+                    Text("Developer")
+                } footer: {
+                    Text("The build running on this device. Worth quoting if you report a problem — press and hold to copy.")
+                }
+                .textSelection(.enabled)
             }
             .navigationTitle("Settings")
             .sheet(item: $exported) { ShareSheet(url: $0.url) }
