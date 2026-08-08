@@ -29,6 +29,12 @@
 			</dict>
 		</dict>
 	</array>
+	<!-- Required of anything declaring CFBundleDocumentTypes, or App Store Connect rejects the
+	     build with ITMS-90737. There's no document browser here: a .sacramentplan is read once
+	     and imported, so taking the original in place saves iOS from leaving a copy in Inbox/
+	     that nothing would ever clean up. -->
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>

@@ -378,7 +378,14 @@ private struct ReviewStep: View {
             if !meeting.incompleteItems.isEmpty {
                 Section("Still to fill") {
                     ForEach(meeting.incompleteItems) { item in
-                        Text(item.title)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(item.title)
+                            if let reason = item.incompleteReason {
+                                Text(reason)
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
                     }
                 }
             }

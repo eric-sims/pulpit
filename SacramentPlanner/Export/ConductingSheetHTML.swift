@@ -82,7 +82,7 @@ enum ConductingSheetHTML {
             if let topic = assignment.topic, !topic.isEmpty {
                 line += " &mdash; \(escape(topic))"
             }
-            if assignment.status.needsFollowUp {
+            if assignment.needsFollowUp {
                 line += " <span class=\"status\">\(escape(assignment.status.displayName))</span>"
             }
             if let phonetic = assignment.person?.phoneticSpelling, !phonetic.isEmpty {
