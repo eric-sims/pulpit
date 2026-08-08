@@ -6,14 +6,14 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeName</key>
-			<string>Sacrament Meeting Plan</string>
+			<string>Pulpit Plan</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>LSHandlerRank</key>
 			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>com.ericsims.sacramentplanner.plan</string>
+				<string>com.ericsims.pulpit.plan</string>
 			</array>
 		</dict>
 	</array>
@@ -25,14 +25,14 @@
 				<string>public.json</string>
 			</array>
 			<key>UTTypeDescription</key>
-			<string>Sacrament Meeting Plan</string>
+			<string>Pulpit Plan</string>
 			<key>UTTypeIdentifier</key>
-			<string>com.ericsims.sacramentplanner.plan</string>
+			<string>com.ericsims.pulpit.plan</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
 				<array>
-					<string>sacramentplan</string>
+					<string>pulpitplan</string>
 				</array>
 				<key>public.mime-type</key>
 				<array>

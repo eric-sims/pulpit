@@ -50,4 +50,4 @@ fastlane/test_output
 .claude/settings.local.json
 # The run skill's driver copies the selected flows/*.swift here before each run; the flows are
 # what's tracked, this is just whichever one ran last.
-.claude/skills/run-sacrament-planner/uitest/SPUITests/Flow.swift
+.claude/skills/run-pulpit/uitest/SPUITests/Flow.swift
