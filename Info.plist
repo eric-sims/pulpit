@@ -2,39 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<!-- The interchange format. Declared as a real type so a .sacramentplan arriving by
-	     Messages, AirDrop or Files is recognised and offers to open in this app, rather than
-	     landing as an anonymous blob of JSON. -->
-	<key>UTExportedTypeDeclarations</key>
-	<array>
-		<dict>
-			<key>UTTypeIdentifier</key>
-			<string>com.ericsims.sacramentplanner.plan</string>
-			<key>UTTypeDescription</key>
-			<string>Sacrament Meeting Plan</string>
-			<key>UTTypeConformsTo</key>
-			<array>
-				<string>public.json</string>
-			</array>
-			<key>UTTypeTagSpecification</key>
-			<dict>
-				<key>public.filename-extension</key>
-				<array>
-					<string>sacramentplan</string>
-				</array>
-				<key>public.mime-type</key>
-				<array>
-					<string>application/json</string>
-				</array>
-			</dict>
-		</dict>
-	</array>
-	<!-- Required of anything declaring CFBundleDocumentTypes, or App Store Connect rejects the
-	     build with ITMS-90737. There's no document browser here: a .sacramentplan is read once
-	     and imported, so taking the original in place saves iOS from leaving a copy in Inbox/
-	     that nothing would ever clean up. -->
-	<key>LSSupportsOpeningDocumentsInPlace</key>
-	<true/>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -48,6 +15,30 @@
 			<array>
 				<string>com.ericsims.sacramentplanner.plan</string>
 			</array>
+		</dict>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.json</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Sacrament Meeting Plan</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.ericsims.sacramentplanner.plan</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>sacramentplan</string>
+				</array>
+				<key>public.mime-type</key>
+				<array>
+					<string>application/json</string>
+				</array>
+			</dict>
 		</dict>
 	</array>
 </dict>
