@@ -152,6 +152,15 @@ public enum ItemKind: String, Codable, CaseIterable, Sendable, Hashable {
         }
     }
 
+    /// Whether the asking-and-confirming cycle applies to this item's people.
+    ///
+    /// Ordinances are exempt. Who performs a blessing is the family's arrangement, not an
+    /// invitation the ward extends, so there is nothing to chase and no status worth carrying —
+    /// a blessing is tracked by whether the family has confirmed the date instead.
+    public var tracksAssignmentStatus: Bool {
+        !isOrdinance
+    }
+
     /// Whether each person in this item carries their own calling. One sustaining commonly covers
     /// several people in several different callings, read in turn before a single vote.
     public var takesCallingPerPerson: Bool {

@@ -37,8 +37,20 @@ struct MeetingOutlineView: View {
             if !meeting.isReady {
                 Section("Outstanding") {
                     ForEach(meeting.incompleteItems) { item in
-                        Label(item.title, systemImage: "square.dashed")
-                            .foregroundStyle(.orange)
+                        Button { editingItem = item } label: {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Label(item.title, systemImage: "square.dashed")
+                                    .foregroundStyle(.orange)
+                                if let reason = item.incompleteReason {
+                                    Text(reason)
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
                     }
                     ForEach(meeting.unconfirmedAssignments) { assignment in
                         HStack {

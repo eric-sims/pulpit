@@ -99,6 +99,15 @@ final class Assignment {
 
     var isFilled: Bool { displayName?.isEmpty == false }
 
+    /// Whether this assignment is still waiting on you before Sunday.
+    ///
+    /// Kinds that don't track status never qualify — an ordinance would otherwise sit at "Not
+    /// asked" forever, since its editor offers no status to change.
+    var needsFollowUp: Bool {
+        guard item?.kind.tracksAssignmentStatus ?? true else { return false }
+        return isFilled && status.needsFollowUp
+    }
+
     var scriptSubject: ScriptSubject? {
         let scriptPerson: ScriptPerson
         if let person {
@@ -209,10 +218,21 @@ final class ProgramItem {
             let subjects = orderedAssignments.filter { $0.role == .subject && $0.isFilled }
             if subjects.contains(where: { ($0.officeText ?? "").isEmpty }) { return true }
         }
+        // A blessing is outstanding until the family says it's happening this Sunday. It stands in
+        // for the assignment status an ordinance doesn't carry, and it's the one detail that
+        // genuinely still moves late in the week.
+        if kind == .babyBlessing && !familyConfirmed { return true }
         guard needsFilling else { return false }
         if kind.isHymn { return hymn == nil }
         if !kind.assignableRoles.isEmpty { return !orderedAssignments.contains(where: \.isFilled) }
         return false
+    }
+
+    /// Why this item is outstanding, for the cases where the title alone wouldn't say.
+    var incompleteReason: String? {
+        guard isIncomplete else { return nil }
+        if kind == .babyBlessing && !familyConfirmed { return "Family hasn't confirmed the date" }
+        return nil
     }
 }
 
@@ -262,7 +282,7 @@ final class Meeting {
     var unconfirmedAssignments: [Assignment] {
         orderedItems
             .flatMap(\.orderedAssignments)
-            .filter { $0.isFilled && $0.status.needsFollowUp }
+            .filter(\.needsFollowUp)
     }
 
     var isReady: Bool {

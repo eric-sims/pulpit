@@ -335,7 +335,7 @@ struct OutlineRow: View {
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
-                let unconfirmed = item.orderedAssignments.filter { $0.isFilled && $0.status.needsFollowUp }
+                let unconfirmed = item.orderedAssignments.filter(\.needsFollowUp)
                 if !unconfirmed.isEmpty {
                     HStack(spacing: 4) {
                         ForEach(unconfirmed) { StatusChip(status: $0.status) }

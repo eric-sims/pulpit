@@ -1,6 +1,8 @@
 ## Xcode Build Artifacts
 build/
 DerivedData/
+# Simulator run output: derived data, screenshots and .xcresult bundles from the run skill's driver.
+.build-artifacts/
 
 ## User Settings and State (Crucial to ignore to avoid merge conflicts)
 xcuserdata/
@@ -46,3 +48,6 @@ fastlane/test_output
 
 ## Claude Code — per-user local permissions, not shared project configuration
 .claude/settings.local.json
+# The run skill's driver copies the selected flows/*.swift here before each run; the flows are
+# what's tracked, this is just whichever one ran last.
+.claude/skills/run-sacrament-planner/uitest/SPUITests/Flow.swift
