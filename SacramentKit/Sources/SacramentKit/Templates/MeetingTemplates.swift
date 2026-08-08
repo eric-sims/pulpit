@@ -40,7 +40,6 @@ public enum MeetingTemplates {
                 .init(.sacramentHymn, needsFilling: true),
                 .init(.sacrament),
                 .init(.speaker, title: "First Speaker", needsFilling: true),
-                .init(.speaker, title: "Second Speaker", needsFilling: true),
                 .init(.intermediateHymn, needsFilling: true),
                 .init(.speaker, title: "Final Speaker", needsFilling: true),
                 .init(.closingHymn, needsFilling: true),

@@ -81,11 +81,11 @@ struct MeetingTemplateTests {
         #expect(ranks == ranks.sorted(), "\(meeting) seeds items out of canonical order")
     }
 
-    @Test("A regular meeting seeds three speakers and an intermediate hymn")
+    @Test("A regular meeting seeds two speakers and an intermediate hymn")
     func regularMeeting() {
         let items = kinds(.regular)
 
-        #expect(items.filter { $0 == .speaker }.count == 3)
+        #expect(items.filter { $0 == .speaker }.count == 2)
         #expect(items.contains(.intermediateHymn))
     }
 
