@@ -16,9 +16,8 @@ public enum ScriptPreview {
         switch kind {
         case .babyBlessing:
             return ScriptContext(
-                people: [ScriptPerson(fullName: "Emma Nielsen", pronouns: .she)],
                 officiators: [ScriptPerson(fullName: "Mark Nielsen", pronouns: .he)],
-                parents: "Brother and Sister Nielsen",
+                family: "Nielsen",
                 unitName: sampleUnitName
             )
         case .confirmation:

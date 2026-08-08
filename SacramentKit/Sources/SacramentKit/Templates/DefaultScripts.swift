@@ -23,7 +23,7 @@ public enum DefaultScripts {
 
     /// Bumped when the shipped wording changes. Templates you haven't edited follow the new
     /// version; templates you have edited stay put and are flagged as out of date instead.
-    public static let currentSeedVersion = 3
+    public static let currentSeedVersion = 4
 
     public static func body(for kind: ScriptKind) -> String {
         switch kind {
@@ -124,11 +124,9 @@ public enum DefaultScripts {
 
         case .babyBlessing:
             """
-            {{plainNames}}{{#if hasParents}}, child of {{parents}},{{/if}} will now receive a name and a blessing.
-
             The blessing will be given by {{officiators}}.
 
-            [Invite the family to come forward.]
+            We will now invite the {{family}} family and those that have been asked to participate to come forward for the baby blessing.
             """
 
         case .confirmation:

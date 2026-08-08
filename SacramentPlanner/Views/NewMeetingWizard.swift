@@ -333,7 +333,9 @@ private struct OrdinancesStep: View {
                 ForEach([ItemKind.babyBlessing, .confirmation], id: \.self) { kind in
                     Button("Add \(kind.defaultTitle.lowercased())", systemImage: "plus") {
                         let item = MeetingFactory.addItem(kind, to: meeting, in: context)
-                        MeetingFactory.addAssignment(role: .subject, to: item, in: context)
+                        if kind == .confirmation {
+                            MeetingFactory.addAssignment(role: .subject, to: item, in: context)
+                        }
                         MeetingFactory.addAssignment(role: .officiator, to: item, in: context)
                     }
                 }

@@ -151,16 +151,33 @@ public struct ItemEntryDTO: Codable, Sendable, Hashable {
 public struct ItemDetailDTO: Codable, Sendable, Hashable {
     public var calling: String?
     public var office: String?
-    public var parents: String?
+    /// The family's surname, for a blessing of a child.
+    public var family: String?
+    /// Whether the family has confirmed the blessing will take place at this meeting.
+    public var familyConfirmed: Bool
 
-    public init(calling: String? = nil, office: String? = nil, parents: String? = nil) {
+    public init(
+        calling: String? = nil,
+        office: String? = nil,
+        family: String? = nil,
+        familyConfirmed: Bool = false
+    ) {
         self.calling = calling
         self.office = office
-        self.parents = parents
+        self.family = family
+        self.familyConfirmed = familyConfirmed
+    }
+
+    public init(from decoder: any Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        calling = try container.decodeIfPresent(String.self, forKey: .calling)
+        office = try container.decodeIfPresent(String.self, forKey: .office)
+        family = try container.decodeIfPresent(String.self, forKey: .family)
+        familyConfirmed = try container.decodeIfPresent(Bool.self, forKey: .familyConfirmed) ?? false
     }
 
     public var isEmpty: Bool {
-        calling == nil && office == nil && parents == nil
+        calling == nil && office == nil && family == nil && !familyConfirmed
     }
 }
 
