@@ -24,6 +24,26 @@ final class Person {
     var isActive: Bool = true
     var createdAt: Date = Date()
 
+    // Nothing reads these — they exist so that deleting someone from the roster clears every
+    // reference to them. A to-one relationship with no inverse isn't maintained on delete: the
+    // reference is left pointing at a row that's gone, and reading it later traps rather than
+    // returning nil. CloudKit requires the inverses too, for the same reason the rest of this
+    // file is shaped the way it is.
+    @Relationship(deleteRule: .nullify, inverse: \Assignment.person)
+    var assignments: [Assignment]?
+
+    @Relationship(deleteRule: .nullify, inverse: \Meeting.presiding)
+    var presidingAt: [Meeting]?
+
+    @Relationship(deleteRule: .nullify, inverse: \Meeting.conducting)
+    var conductingAt: [Meeting]?
+
+    @Relationship(deleteRule: .nullify, inverse: \Meeting.chorister)
+    var choristerAt: [Meeting]?
+
+    @Relationship(deleteRule: .nullify, inverse: \Meeting.organist)
+    var organistAt: [Meeting]?
+
     init(
         fullName: String = "",
         preferredName: String? = nil,

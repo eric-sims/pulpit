@@ -19,6 +19,10 @@ struct SacramentPlannerApp: App {
         // Local-only for now. Every model is already shaped for CloudKit, so enabling sync later
         // is a change to this configuration rather than a migration.
         let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        // Before the container opens, which is the only point where this is fixable at all: a
+        // store from a build before Person had its inverses can hold references to deleted
+        // people, and reading one traps. See StoreRepair.
+        StoreRepair.clearDanglingPersonReferences(at: configuration.url)
         do {
             modelContainer = try ModelContainer(for: schema, configurations: [configuration])
         } catch {
