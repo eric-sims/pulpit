@@ -70,8 +70,8 @@ public struct ScriptContext: Sendable {
     public var explicitCalling: String?
     /// A priesthood office for the item as a whole.
     public var explicitOffice: String?
-    /// Parents named when a child is blessed, already formatted for reading aloud.
-    public var parents: String?
+    /// The family's surname, named when a child is blessed.
+    public var family: String?
     /// The ward or branch name.
     public var unitName: String
     /// Ad-hoc token values, for user-authored templates that invent their own placeholders.
@@ -86,7 +86,7 @@ public struct ScriptContext: Sendable {
         officiators: [ScriptPerson] = [],
         calling: String? = nil,
         office: String? = nil,
-        parents: String? = nil,
+        family: String? = nil,
         unitName: String = "",
         extras: [String: String] = [:],
         flags: Set<String> = []
@@ -95,7 +95,7 @@ public struct ScriptContext: Sendable {
         self.officiators = officiators
         self.explicitCalling = calling
         self.explicitOffice = office
-        self.parents = parents
+        self.family = family
         self.unitName = unitName
         self.extras = extras
         self.flags = flags
@@ -107,7 +107,7 @@ public struct ScriptContext: Sendable {
         officiators: [ScriptPerson] = [],
         calling: String? = nil,
         office: String? = nil,
-        parents: String? = nil,
+        family: String? = nil,
         unitName: String = "",
         extras: [String: String] = [:],
         flags: Set<String> = []
@@ -117,7 +117,7 @@ public struct ScriptContext: Sendable {
             officiators: officiators,
             calling: calling,
             office: office,
-            parents: parents,
+            family: family,
             unitName: unitName,
             extras: extras,
             flags: flags
@@ -142,7 +142,7 @@ public struct ScriptContext: Sendable {
             officiators: officiators,
             calling: subject.calling ?? explicitCalling,
             office: subject.office ?? explicitOffice,
-            parents: parents,
+            family: family,
             unitName: unitName,
             extras: extras,
             flags: flags

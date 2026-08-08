@@ -91,8 +91,8 @@ public enum ScriptRenderer {
             resolved = (context.office ?? "", false)
         case "officewitharticle":
             resolved = (context.officeWithArticle, false)
-        case "parents":
-            resolved = (context.parents ?? "", true)
+        case "family":
+            resolved = (context.family ?? "", true)
         case "unit":
             resolved = (context.unitName, false)
         case "brothersister":
@@ -143,7 +143,7 @@ public enum ScriptRenderer {
         case "hascalling": return !(context.calling ?? "").isEmpty
         case "hasoffice": return !(context.office ?? "").isEmpty
         case "hasofficiators": return !context.officiators.isEmpty
-        case "hasparents": return !(context.parents ?? "").isEmpty
+        case "hasfamily": return !(context.family ?? "").isEmpty
         case "hashonorific": return !context.honorificPhrase.isEmpty
         case "hasunit": return !context.unitName.isEmpty
         // Known flag names that simply aren't set read as false rather than as an error.
@@ -231,6 +231,7 @@ public enum ScriptRenderer {
         .init(token: "{{calling}}", summary: "The calling being filled or vacated"),
         .init(token: "{{office}}", summary: "Priesthood office, for ordinations"),
         .init(token: "{{officeWithArticle}}", summary: "“a deacon”, “an elder” — article included"),
+        .init(token: "{{family}}", summary: "The family's surname, for a blessing of a child"),
         .init(token: "{{unit}}", summary: "Ward or branch name"),
         .init(token: "{{brotherSister}}", summary: "Brother, Sister, brothers and sisters"),
         .init(token: "{{subject}}", summary: "he / she / they"),

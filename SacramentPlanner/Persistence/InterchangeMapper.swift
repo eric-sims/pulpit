@@ -52,7 +52,9 @@ enum InterchangeMapper {
             entries: item.orderedEntries.map {
                 ItemEntryDTO(id: $0.id, order: $0.order, text: $0.text, isChecked: $0.isChecked)
             },
-            detail: item.parentsText.map { ItemDetailDTO(parents: $0) }
+            detail: (item.familyName != nil || item.familyConfirmed)
+                ? ItemDetailDTO(family: item.familyName, familyConfirmed: item.familyConfirmed)
+                : nil
         )
     }
 
@@ -160,7 +162,8 @@ enum InterchangeMapper {
             item.hymnBookRaw = itemDTO.hymnBook
             item.hymnNumber = itemDTO.hymnNumber
             item.scriptOverride = itemDTO.scriptOverride
-            item.parentsText = itemDTO.detail?.parents
+            item.familyName = itemDTO.detail?.family
+            item.familyConfirmed = itemDTO.detail?.familyConfirmed ?? false
             item.meeting = meeting
             context.insert(item)
 

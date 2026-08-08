@@ -10,7 +10,7 @@ struct DefaultScriptsTests {
             officiators: [ScriptPerson(fullName: "David Larsen", pronouns: .he)],
             calling: "Elders Quorum President",
             office: "elder",
-            parents: "Brother and Sister Nielsen",
+            family: "Nielsen",
             unitName: "Highland 4th Ward"
         )
     }
@@ -185,29 +185,30 @@ struct DefaultScriptsTests {
         #expect(proposal(office: "high priest").contains("be ordained a high priest"))
     }
 
-    @Test("A blessed infant is never given a Brother or Sister honorific")
-    func infantsHaveNoHonorific() {
+    @Test("A baby blessing names the officiator and invites the family forward")
+    func blessingNamesOfficiatorAndFamily() {
         let context = ScriptContext(
-            people: [ScriptPerson(fullName: "Emma Nielsen", pronouns: .she)],
             officiators: [ScriptPerson(fullName: "Mark Nielsen", pronouns: .he)],
-            parents: "Brother and Sister Nielsen"
+            family: "Nielsen"
         )
         let output = ScriptRenderer.render(DefaultScripts.body(for: .babyBlessing), context: context)
 
-        #expect(output.plainText.hasPrefix("Emma Nielsen, child of Brother and Sister Nielsen, will now receive"))
-        #expect(!output.plainText.contains("Sister Emma"))
-        #expect(output.plainText.contains("blessing will be given by Brother Mark Nielsen"))
+        #expect(output.plainText.hasPrefix("The blessing will be given by Brother Mark Nielsen."))
+        #expect(output.plainText.contains(
+            "We will now invite the Nielsen family and those that have been asked to participate to come forward for the baby blessing."
+        ))
     }
 
-    @Test("A blessing with no parents recorded skips that clause cleanly")
-    func blessingWithoutParents() {
+    @Test("A blessing with no family recorded still reads cleanly")
+    func blessingWithoutFamily() {
         let context = ScriptContext(
-            people: [ScriptPerson(fullName: "Emma Nielsen", pronouns: .she)],
             officiators: [ScriptPerson(fullName: "Mark Nielsen", pronouns: .he)]
         )
         let output = ScriptRenderer.render(DefaultScripts.body(for: .babyBlessing), context: context)
 
-        #expect(output.plainText.hasPrefix("Emma Nielsen will now receive a name and a blessing."))
+        #expect(output.plainText.contains(
+            "We will now invite the family and those that have been asked to participate to come forward for the baby blessing."
+        ))
     }
 
     @Test("Records of membership inflect singular and plural")

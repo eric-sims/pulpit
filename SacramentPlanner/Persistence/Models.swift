@@ -144,7 +144,10 @@ final class ProgramItem {
     var hymnNumber: Int?
     /// Per-instance wording, edited without disturbing the saved template.
     var scriptOverride: String?
-    var parentsText: String?
+    /// The family's surname, for a blessing of a child.
+    var familyName: String?
+    /// Whether the family has confirmed the blessing will take place at this meeting.
+    var familyConfirmed: Bool = false
     /// Seeded slots the wizard should ask about and the readiness indicator should count.
     var needsFilling: Bool = false
     var meeting: Meeting?

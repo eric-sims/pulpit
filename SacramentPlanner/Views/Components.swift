@@ -274,10 +274,11 @@ struct OrdinanceItemEditor: View {
             AssignmentNameRow(assignment: assignment)
         }
         if item.kind == .babyBlessing {
-            TextField("Parents", text: Binding(
-                get: { item.parentsText ?? "" },
-                set: { item.parentsText = $0.isEmpty ? nil : $0 }
+            TextField("Family", text: Binding(
+                get: { item.familyName ?? "" },
+                set: { item.familyName = $0.isEmpty ? nil : $0 }
             ))
+            Toggle("Family confirmed", isOn: $item.familyConfirmed)
         }
     }
 }

@@ -44,7 +44,7 @@ enum ScriptComposer {
         return ScriptContext(
             subjects: subjects,
             officiators: officiators,
-            parents: item.parentsText,
+            family: item.familyName,
             unitName: meeting.unitName,
             flags: flags
         )
