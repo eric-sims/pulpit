@@ -75,7 +75,7 @@ struct MeetingOutlineView: View {
             }
 
             Section {
-                Button("Add an item", systemImage: "plus") { isAddingItem = true }
+                Button("Add Item", systemImage: "plus") { isAddingItem = true }
             }
         }
         .navigationTitle(meeting.date.formatted(.dateTime.month().day().year()))
@@ -84,6 +84,8 @@ struct MeetingOutlineView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Export", systemImage: "square.and.arrow.up") { isExporting = true }
             }
+            // EditButton is text; Export is a symbol. Butted together they read as one control.
+            ToolbarSpacer(.fixed, placement: .topBarTrailing)
             ToolbarItem(placement: .topBarTrailing) { EditButton() }
         }
         .sheet(isPresented: $isExporting) {

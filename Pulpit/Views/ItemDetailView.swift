@@ -40,12 +40,12 @@ struct ItemDetailView: View {
                 if let rendering {
                     Section {
                         ScriptPreviewText(rendering: rendering)
-                        Button(item.scriptOverride == nil ? "Reword just this one" : "Edit wording",
+                        Button(item.scriptOverride == nil ? "Reword Just This One" : "Edit Wording",
                                systemImage: "pencil") {
                             isEditingScript = true
                         }
                         if item.scriptOverride != nil {
-                            Button("Revert to the saved script", systemImage: "arrow.uturn.backward", role: .destructive) {
+                            Button("Revert to Saved Script", systemImage: "arrow.uturn.backward", role: .destructive) {
                                 item.scriptOverride = nil
                             }
                         }
@@ -73,7 +73,7 @@ struct ItemDetailView: View {
                         set: { item.notes = $0.isEmpty ? nil : $0 }
                     ), axis: .vertical)
                 } header: {
-                    Text("Private notes")
+                    Text("Private Notes")
                 } footer: {
                     Text("For you. Excluded from shared files unless you say otherwise.")
                 }
@@ -83,6 +83,7 @@ struct ItemDetailView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
+                        .buttonStyle(.glassProminent)
                 }
             }
             .sheet(isPresented: $isEditingScript) {
@@ -176,6 +177,7 @@ struct ScriptOverrideEditor: View {
                         item.scriptOverride = draft
                         dismiss()
                     }
+                    .buttonStyle(.glassProminent)
                 }
             }
             .onAppear {

@@ -68,16 +68,16 @@ struct RootView: View {
 
     private var tabs: some View {
         TabView {
-            Tab("Meetings", systemImage: "list.bullet.rectangle.portrait") {
+            Tab("Meetings", systemImage: "list.bullet.rectangle.portrait.fill") {
                 MeetingListView()
             }
-            Tab("Roster", systemImage: "person.2") {
+            Tab("Roster", systemImage: "person.2.fill") {
                 RosterView()
             }
-            Tab("Scripts", systemImage: "text.quote") {
+            Tab("Scripts", systemImage: "quote.bubble.fill") {
                 ScriptLibraryView()
             }
-            Tab("Settings", systemImage: "gearshape") {
+            Tab("Settings", systemImage: "gearshape.fill") {
                 SettingsView()
             }
         }

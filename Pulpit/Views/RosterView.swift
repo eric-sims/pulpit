@@ -123,7 +123,7 @@ struct ScriptTemplateEditor: View {
             }
 
             Section {
-                Picker("Sample person", selection: $pronouns) {
+                Picker("Sample Person", selection: $pronouns) {
                     ForEach(PronounSet.selectableCases, id: \.self) { set in
                         Text(set.formLabel).tag(set)
                     }
@@ -146,7 +146,7 @@ struct ScriptTemplateEditor: View {
 
             if template.isUserModified {
                 Section {
-                    Button("Restore the shipped wording", systemImage: "arrow.uturn.backward", role: .destructive) {
+                    Button("Restore Shipped Wording", systemImage: "arrow.uturn.backward", role: .destructive) {
                         guard let kind = template.kind else { return }
                         template.body = DefaultScripts.body(for: kind)
                         template.seedVersion = DefaultScripts.currentSeedVersion
@@ -175,13 +175,13 @@ struct SettingsView: View {
                 Section {
                     TextField("Ward or branch", text: $unitName)
                 } header: {
-                    Text("Your unit")
+                    Text("Your Unit")
                 } footer: {
                     Text("Used in scripts that name the ward. Each meeting keeps its own copy, so an imported meeting from another ward stays correct.")
                 }
 
                 Section {
-                    Button("Export All Meetings", systemImage: "arrow.down.doc") { exportBackup() }
+                    Button("Export All Meetings", systemImage: "square.and.arrow.up") { exportBackup() }
                         .disabled(meetings.isEmpty)
                 } header: {
                     Text("Backup")
@@ -194,7 +194,7 @@ struct SettingsView: View {
                     LabeledContent("Hymns—For Home and Church", value: "\(HymnCatalog.shared.hymns(in: .homeAndChurch).count)")
                     LabeledContent("Verified", value: HymnCatalog.shared.verifiedOn)
                 } header: {
-                    Text("Hymn catalog")
+                    Text("Hymn Catalog")
                 } footer: {
                     Text("Titles, numbers and sections only. No lyrics or music.")
                 }

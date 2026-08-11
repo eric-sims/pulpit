@@ -19,21 +19,21 @@ final class Flow: XCTestCase {
         advanceWizard(to: "Any blessings?")
 
         // Add a blessing and name someone to officiate, via the one-off name path.
-        tap(app.buttons["Add blessing of a child"], "Add blessing of a child")
+        tap(app.buttons["Add Blessing of a Child"], "Add Blessing of a Child")
         tap(app.buttons.containing(.staticText, identifier: "Officiating").firstMatch, "Officiating row")
         let search = app.searchFields.firstMatch
         tap(search, "roster search field")
         search.typeText("Mark Nielsen")
         // The label has curly quotes around the name, so match on the tail of it.
-        tap(app.buttons.containing(NSPredicate(format: "label CONTAINS 'just this once'")).firstMatch,
+        tap(app.buttons.containing(NSPredicate(format: "label CONTAINS 'Just This Once'")).firstMatch,
             "use just this once")
 
         let family = app.textFields["Family"]
         tap(family, "Family field")
         family.typeText("Nielsen")
 
-        let confirmed = app.switches["Family confirmed"]
-        XCTAssertTrue(confirmed.waitForExistence(timeout: 5), "no Family confirmed toggle")
+        let confirmed = app.switches["Family Confirmed"]
+        XCTAssertTrue(confirmed.waitForExistence(timeout: 5), "no Family Confirmed toggle")
         XCTAssertEqual(confirmed.value as? String, "0", "toggle should start off")
         shot("01-ordinances-step")
 
@@ -65,8 +65,8 @@ final class Flow: XCTestCase {
         shot("04-item-editor")
 
         // Confirming should clear it out of Outstanding.
-        flip(app.switches["Family confirmed"], "Family confirmed")
-        XCTAssertEqual(app.switches["Family confirmed"].value as? String, "1", "toggle didn't flip")
+        flip(app.switches["Family Confirmed"], "Family Confirmed")
+        XCTAssertEqual(app.switches["Family Confirmed"].value as? String, "1", "toggle didn't flip")
         app.navigationBars["Blessing of a Child"].buttons["Done"].tap()
         XCTAssertTrue(app.staticTexts["Outstanding"].waitForExistence(timeout: 15), "didn't return to the outline")
         shot("05-outline-after-confirming")

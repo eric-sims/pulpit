@@ -44,7 +44,7 @@ struct PersonPickerView: View {
                             selection = nil
                             dismiss()
                         } label: {
-                            Label("Use “\(query)” just this once", systemImage: "person.badge.clock")
+                            Label("Use “\(query)” Just This Once", systemImage: "person.badge.clock")
                         }
                     } footer: {
                         Text("For visitors and missionaries, without adding them to the roster.")
@@ -79,7 +79,7 @@ struct PersonPickerView: View {
                 }
 
                 Section {
-                    Button("Add someone new", systemImage: "person.badge.plus") {
+                    Button("Add Someone New", systemImage: "person.badge.plus") {
                         isAddingPerson = true
                     }
                 }
@@ -136,7 +136,7 @@ struct PersonEditorView: View {
                 Section {
                     TextField("Title", text: $title)
                 } header: {
-                    Text("Form of address")
+                    Text("Form of Address")
                 } footer: {
                     Text("“President”, “Bishop”, “Elder”. Overrides Brother or Sister. Leave blank for most people.")
                 }
@@ -163,6 +163,7 @@ struct PersonEditorView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") { save() }
+                        .buttonStyle(.glassProminent)
                         .disabled(fullName.trimmingCharacters(in: .whitespaces).isEmpty)
                 }
             }

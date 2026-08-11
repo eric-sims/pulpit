@@ -34,7 +34,7 @@ struct ImportPreviewView: View {
                 }
 
                 if !result.notes.isEmpty {
-                    Section("Worth knowing") {
+                    Section("Worth Knowing") {
                         ForEach(Array(result.notes.enumerated()), id: \.offset) { _, note in
                             Label(note.message, systemImage: "info.circle")
                                 .font(.footnote)
@@ -83,6 +83,7 @@ struct ImportPreviewView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Import") { performImport() }
+                        .buttonStyle(.glassProminent)
                 }
             }
             .onAppear(perform: prepareSuggestions)
