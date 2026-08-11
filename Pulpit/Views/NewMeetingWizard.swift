@@ -34,32 +34,44 @@ struct NewMeetingWizard: View {
                 }
             }
             .navigationTitle(meeting == nil ? "New Meeting" : steps[step].title)
-            .navigationBarTitleDisplayMode(.inline)
+            // A large title, because the step titles are whole questions. Inline, they shared the
+            // bar with Back, Cancel and Next and truncated to "What are the s…"; on their own line
+            // they fit. HIG > Toolbars asks for titles under 15 characters *so there's room for
+            // other controls* — a large title is how you keep both.
+            .navigationBarTitleDisplayMode(.large)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
+                // Both leading items are declared under the same placement so their order is
+                // deterministic, with a fixed gap so the symbol and the text label don't read as
+                // one control. `chevron.backward` rather than `.left` so it mirrors in RTL.
+                if meeting != nil, step > 0 {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("Back", systemImage: "chevron.backward") { step -= 1 }
+                    }
+                    ToolbarSpacer(.fixed, placement: .topBarLeading)
+                }
+                ToolbarItem(placement: .topBarLeading) {
                     Button("Cancel", role: .cancel) { cancel() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     if meeting == nil {
                         Button("Start") { start() }
+                            .buttonStyle(.glassProminent)
                     } else if step == steps.count - 1 {
                         Button("Done") { dismiss() }
+                            .buttonStyle(.glassProminent)
                     } else {
                         Button(currentStepIsSkippable ? "Skip" : "Next") { step += 1 }
-                    }
-                }
-                if meeting != nil, step > 0 {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button("Back", systemImage: "chevron.left") { step -= 1 }
+                            .buttonStyle(.glassProminent)
                     }
                 }
             }
+            .scrollEdgeEffectStyle(.hard, for: .bottom)
             .safeAreaInset(edge: .bottom) {
                 if meeting != nil {
                     ProgressView(value: Double(step + 1), total: Double(steps.count))
                         .progressViewStyle(.linear)
                         .padding()
-                        .background(.bar)
+                        .accessibilityLabel("Step \(step + 1) of \(steps.count)")
                 }
             }
         }
@@ -267,7 +279,7 @@ private struct SpeakersStep: View {
                 }
             }
             Section {
-                Button("Add another speaker", systemImage: "plus") {
+                Button("Add Another Speaker", systemImage: "plus") {
                     let item = MeetingFactory.addItem(.speaker, to: meeting, in: context)
                     item.needsFilling = true
                     MeetingFactory.addAssignment(role: .speaker, to: item, in: context)
@@ -323,7 +335,7 @@ private struct OrdinancesStep: View {
             ForEach(items) { item in
                 Section(item.title) {
                     OrdinanceItemEditor(item: item)
-                    Button("Remove this \(item.kind.defaultTitle.lowercased())", systemImage: "trash", role: .destructive) {
+                    Button("Remove \(item.kind.defaultTitle)", systemImage: "trash", role: .destructive) {
                         MeetingFactory.deleteItem(item, from: meeting, in: context)
                     }
                     .font(.footnote)
@@ -331,7 +343,7 @@ private struct OrdinancesStep: View {
             }
             Section {
                 ForEach([ItemKind.babyBlessing, .confirmation], id: \.self) { kind in
-                    Button("Add \(kind.defaultTitle.lowercased())", systemImage: "plus") {
+                    Button("Add \(kind.defaultTitle)", systemImage: "plus") {
                         let item = MeetingFactory.addItem(kind, to: meeting, in: context)
                         if kind == .confirmation {
                             MeetingFactory.addAssignment(role: .subject, to: item, in: context)

@@ -224,13 +224,13 @@ struct BusinessItemEditor: View {
                 AssignmentStatusRow(assignment: assignment)
             }
             if item.orderedAssignments.count > 1 {
-                Button("Remove \(assignment.displayName ?? "this person")", systemImage: "minus.circle", role: .destructive) {
+                Button("Remove \(assignment.displayName ?? "Person")", systemImage: "minus.circle", role: .destructive) {
                     context.delete(assignment)
                 }
                 .font(.footnote)
             }
         }
-        Button("Add another person", systemImage: "plus") {
+        Button("Add Another Person", systemImage: "plus") {
             MeetingFactory.addAssignment(role: .subject, to: item, in: context)
         }
         .font(.footnote)
@@ -252,13 +252,13 @@ struct BusinessKindSection: View {
         if let item {
             Section(kind.defaultTitle) {
                 BusinessItemEditor(item: item)
-                Button("Remove this \(kind.defaultTitle.lowercased())", systemImage: "trash", role: .destructive) {
+                Button("Remove \(kind.defaultTitle)", systemImage: "trash", role: .destructive) {
                     MeetingFactory.deleteItem(item, from: meeting, in: context)
                 }
                 .font(.footnote)
             }
         } else {
-            Button("Add \(kind.defaultTitle.lowercased())", systemImage: "plus") {
+            Button("Add \(kind.defaultTitle)", systemImage: "plus") {
                 let created = MeetingFactory.addItem(kind, to: meeting, in: context)
                 MeetingFactory.addAssignment(role: .subject, to: created, in: context)
             }
@@ -278,7 +278,7 @@ struct OrdinanceItemEditor: View {
                 get: { item.familyName ?? "" },
                 set: { item.familyName = $0.isEmpty ? nil : $0 }
             ))
-            Toggle("Family confirmed", isOn: $item.familyConfirmed)
+            Toggle("Family Confirmed", isOn: $item.familyConfirmed)
         }
     }
 }
@@ -304,6 +304,9 @@ struct AnnouncementsEditor: View {
                 TextField("Add an announcement", text: $draft, axis: .vertical)
                 Button("Add", systemImage: "plus.circle.fill") { add() }
                     .labelStyle(.iconOnly)
+                    // An icon-only button is only as big as its glyph; 44pt is the minimum.
+                    .frame(minWidth: 44, minHeight: 44, alignment: .trailing)
+                    .contentShape(Rectangle())
                     .disabled(draft.trimmingCharacters(in: .whitespaces).isEmpty)
             }
         } footer: {

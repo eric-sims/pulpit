@@ -55,7 +55,7 @@ struct ExportView: View {
 
                 if hasPrivateNotes {
                     Section {
-                        Toggle("Include private notes", isOn: $includePrivateNotes)
+                        Toggle("Include Private Notes", isOn: $includePrivateNotes)
                     } footer: {
                         Text("This meeting has private notes. They're left out unless you say otherwise. Notes about people in your roster never travel at all.")
                     }
@@ -73,8 +73,9 @@ struct ExportView: View {
             .navigationTitle("Export")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
+                ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
+                        .buttonStyle(.glassProminent)
                 }
             }
             .sheet(item: $exported) { file in

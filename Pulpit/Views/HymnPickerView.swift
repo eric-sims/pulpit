@@ -22,7 +22,7 @@ struct HymnPickerView: View {
             List {
                 if item.hymn != nil {
                     Section {
-                        Button("Clear selection", systemImage: "xmark.circle", role: .destructive) {
+                        Button("Clear Selection", systemImage: "xmark.circle", role: .destructive) {
                             item.setHymn(nil)
                             dismiss()
                         }
@@ -57,6 +57,9 @@ struct HymnPickerView: View {
                 }
             }
             .listStyle(.plain)
+            // Separates the filter bar from the list by blurring what scrolls under it, rather
+            // than by painting a background behind it. See HIG > Toolbars.
+            .scrollEdgeEffectStyle(.hard, for: .top)
             .searchable(text: $query, prompt: "Number or title")
             .navigationTitle(item.title)
             .navigationBarTitleDisplayMode(.inline)
@@ -64,27 +67,34 @@ struct HymnPickerView: View {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel", role: .cancel) { dismiss() }
                 }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Picker("Book", selection: $book) {
-                        ForEach(HymnBook.allCases, id: \.self) { book in
-                            Text(book.shortName).tag(book)
-                        }
-                    }
-                    .pickerStyle(.segmented)
-                }
             }
-            .safeAreaInset(edge: .top) {
-                if item.kind.requiresSacramentHymn {
-                    Toggle("Sacrament hymns only", isOn: $sacramentOnly)
-                        .padding(.horizontal)
-                        .padding(.vertical, 8)
-                        .background(.bar)
-                }
-            }
+            .safeAreaInset(edge: .top) { filters }
             .onAppear {
                 sacramentOnly = item.kind.requiresSacramentHymn
                 if let existing = item.hymn { book = existing.book }
             }
         }
+    }
+
+    /// The book switch and the sacrament filter, in the content area rather than the navigation
+    /// bar. A segmented control squeezed in beside an inline title and a Cancel button had nowhere
+    /// near enough room, and the toolbar is meant for actions rather than complex controls.
+    private var filters: some View {
+        VStack(spacing: 10) {
+            Picker("Hymnbook", selection: $book) {
+                ForEach(HymnBook.allCases, id: \.self) { book in
+                    Text(book.shortName).tag(book)
+                }
+            }
+            .pickerStyle(.segmented)
+            .labelsHidden()
+
+            if item.kind.requiresSacramentHymn {
+                Toggle("Sacrament Hymns Only", isOn: $sacramentOnly)
+                    .font(.subheadline)
+            }
+        }
+        .padding(.horizontal)
+        .padding(.vertical, 10)
     }
 }

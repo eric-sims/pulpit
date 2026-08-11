@@ -24,9 +24,20 @@ struct ConductingView: View {
     @AppStorage("conducting.fontScale") private var fontScale = 1.0
     @AppStorage("conducting.chapelMode") private var chapelMode = true
 
+    /// The device's Dynamic Type multiplier, as a plain number.
+    ///
+    /// This view sizes its text in points so the in-meeting stepper can push it well past what
+    /// you'd want elsewhere on your phone. Sizing in points also means it would otherwise ignore
+    /// the system text size completely — so every size here is multiplied by this as well, and
+    /// someone running Larger Text still gets larger text.
+    @ScaledMetric(relativeTo: .body) private var typeScale = 1.0
+
     @State private var activeItemID: UUID?
     @State private var isAddingItem = false
     @State private var isConfirmingReset = false
+
+    /// The pulpit stepper and the system text size, combined.
+    private var textScale: Double { fontScale * typeScale }
 
     private var items: [ProgramItem] { meeting.orderedItems }
 
@@ -44,6 +55,7 @@ struct ConductingView: View {
                     }
                 }
                 .listStyle(.plain)
+                .scrollEdgeEffectStyle(.hard, for: [.top, .bottom])
                 .safeAreaInset(edge: .top) { pinnedActiveBar(proxy: proxy) }
                 .safeAreaInset(edge: .bottom) { progressBar }
                 .onAppear { beginConducting(proxy: proxy) }
@@ -81,7 +93,7 @@ struct ConductingView: View {
             ConductingRowHeader(
                 item: item,
                 isActive: isActive,
-                fontScale: fontScale,
+                textScale: textScale,
                 onToggle: { toggle(item, proxy: proxy) }
             )
             .contentShape(Rectangle())
@@ -92,7 +104,7 @@ struct ConductingView: View {
                     item: item,
                     meeting: meeting,
                     templates: templates,
-                    fontScale: fontScale,
+                    textScale: textScale,
                     onComplete: { complete(item, proxy: proxy) },
                     onSkip: { skip(item, proxy: proxy) }
                 )
@@ -122,8 +134,11 @@ struct ConductingView: View {
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                     Text(item.title)
-                        .font(.system(size: 17 * fontScale, weight: .semibold))
-                        .lineLimit(1)
+                        .font(.system(size: 17 * textScale, weight: .semibold))
+                        .lineLimit(2)
+                        // Without this a long title breaks mid-word at accessibility sizes —
+                        // "Welco / me" — because one word no longer fits the column.
+                        .minimumScaleFactor(0.6)
                 }
                 Spacer()
                 Button("Go") {
@@ -132,22 +147,31 @@ struct ConductingView: View {
                         proxy.scrollTo(item.id, anchor: .top)
                     }
                 }
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(.glassProminent)
                 .controlSize(.small)
                 .accessibilityLabel("Scroll to the current item")
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 16)
             .padding(.vertical, 10)
-            .background(.bar)
+            .glassEffect(.regular, in: .capsule)
+            .padding(.horizontal, 12)
+            .padding(.bottom, 4)
         }
     }
 
+    /// Both pinned bars sit on Liquid Glass: they're custom controls floating over the content
+    /// layer, and they're the two most important functional elements on this screen. A scroll edge
+    /// effect alone left the script text legible *through* them at accessibility text sizes.
     private var progressBar: some View {
         let resolved = items.filter(\.status.isResolved).count
         return HStack {
+            // Both counters stay on one line and let the track take the slack; wrapped, they
+            // doubled the height of the bar at accessibility text sizes.
             Text("\(resolved) of \(items.count)")
                 .font(.caption)
                 .monospacedDigit()
+                .lineLimit(1)
+                .fixedSize()
             ProgressView(value: Double(resolved), total: Double(max(items.count, 1)))
             if let started = meeting.conductingStartedAt {
                 TimelineView(.periodic(from: started, by: 30)) { _ in
@@ -155,38 +179,47 @@ struct ConductingView: View {
                         .font(.caption)
                         .monospacedDigit()
                         .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                        .fixedSize()
                 }
             }
         }
-        .padding(.horizontal)
-        .padding(.vertical, 8)
-        .background(.bar)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 10)
+        .glassEffect(.regular, in: .capsule)
+        .padding(.horizontal, 12)
+        .padding(.top, 4)
     }
 
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
-        ToolbarItem(placement: .cancellationAction) {
-            Button("Done") { dismiss() }
-        }
-        ToolbarItem(placement: .primaryAction) {
+        ToolbarItem(placement: .topBarTrailing) {
             Menu {
-                // A stepper rather than Dynamic Type: at a pulpit you want this bigger than you
-                // want the rest of your phone.
-                Button("Larger text", systemImage: "textformat.size.larger") {
+                // A stepper *on top of* Dynamic Type: at a pulpit you want this bigger than you
+                // want the rest of your phone. `typeScale` still applies underneath, so the
+                // system text size is respected either way.
+                Button("Larger Text", systemImage: "textformat.size.larger") {
                     fontScale = min(fontScale + 0.15, 2.0)
                 }
-                Button("Smaller text", systemImage: "textformat.size.smaller") {
+                Button("Smaller Text", systemImage: "textformat.size.smaller") {
                     fontScale = max(fontScale - 0.15, 0.85)
                 }
-                Toggle("Chapel mode", systemImage: "moon", isOn: $chapelMode)
+                Toggle("Chapel Mode", systemImage: "moon", isOn: $chapelMode)
                 Divider()
-                Button("Add an item", systemImage: "plus") { isAddingItem = true }
-                Button("Start over", systemImage: "arrow.counterclockwise", role: .destructive) {
+                Button("Add Item", systemImage: "plus") { isAddingItem = true }
+                Button("Start Over", systemImage: "arrow.counterclockwise", role: .destructive) {
                     isConfirmingReset = true
                 }
             } label: {
-                Label("Options", systemImage: "ellipsis.circle")
+                Label("Options", systemImage: "ellipsis")
             }
+        }
+        // "Done" is a text label and the menu is a symbol; without a gap between them the two read
+        // as one control. See HIG > Toolbars > Item groupings.
+        ToolbarSpacer(.fixed, placement: .topBarTrailing)
+        ToolbarItem(placement: .confirmationAction) {
+            Button("Done") { dismiss() }
+                .buttonStyle(.glassProminent)
         }
     }
 
@@ -260,36 +293,42 @@ struct ConductingView: View {
 private struct ConductingRowHeader: View {
     let item: ProgramItem
     let isActive: Bool
-    let fontScale: Double
+    let textScale: Double
     let onToggle: () -> Void
 
     var body: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 14) {
+        HStack(alignment: .top, spacing: 8) {
             Button(action: onToggle) {
                 Image(systemName: symbol)
-                    .font(.system(size: 26 * fontScale))
+                    .font(.system(size: 26 * textScale))
                     .foregroundStyle(tint)
+                    // A 26pt glyph is a 26pt target. The minimum is 44.
+                    .frame(minWidth: 44, minHeight: 44)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
             .accessibilityLabel(item.status == .completed ? "Mark not done" : "Mark done")
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(item.title)
-                    .font(.system(size: 19 * fontScale, weight: isActive ? .bold : .medium))
+                    .font(.system(size: 19 * textScale, weight: isActive ? .bold : .medium))
                     .strikethrough(item.status == .skipped)
                     .foregroundStyle(item.status.isResolved && !isActive ? .secondary : .primary)
 
                 if let detail = detailText {
                     Text(detail)
-                        .font(.system(size: 15 * fontScale))
+                        .font(.system(size: 15 * textScale))
                         .foregroundStyle(.secondary)
                 }
                 if item.status == .skipped {
                     Text("Skipped")
-                        .font(.system(size: 13 * fontScale))
+                        .font(.system(size: 13 * textScale))
                         .foregroundStyle(.orange)
                 }
             }
+            // Centres the title against the 44pt tap target without pinning the two to a shared
+            // baseline, which the taller target would otherwise drag out of line.
+            .frame(minHeight: 44, alignment: .center)
             Spacer(minLength: 0)
         }
     }
@@ -323,7 +362,7 @@ private struct ConductingRowDetail: View {
     let item: ProgramItem
     let meeting: Meeting
     let templates: [ScriptTemplate]
-    let fontScale: Double
+    let textScale: Double
     let onComplete: () -> Void
     let onSkip: () -> Void
 
@@ -341,8 +380,8 @@ private struct ConductingRowDetail: View {
 
             if let rendering {
                 Text(rendering.attributedString)
-                    .font(.system(size: 20 * fontScale))
-                    .lineSpacing(5 * fontScale)
+                    .font(.system(size: 20 * textScale))
+                    .lineSpacing(5 * textScale)
                     .textSelection(.enabled)
             }
 
@@ -351,7 +390,7 @@ private struct ConductingRowDetail: View {
                 VStack(alignment: .leading, spacing: 2) {
                     ForEach(pronunciations, id: \.name) { note in
                         Text("\(note.name) — \(note.phonetic)")
-                            .font(.system(size: 15 * fontScale, design: .serif))
+                            .font(.system(size: 15 * textScale, design: .serif))
                             .italic()
                     }
                 }
@@ -360,7 +399,7 @@ private struct ConductingRowDetail: View {
 
             if let notes = item.notes, !notes.isEmpty {
                 Label(notes, systemImage: "note.text")
-                    .font(.system(size: 15 * fontScale))
+                    .font(.system(size: 15 * textScale))
                     .foregroundStyle(.secondary)
             }
 
@@ -369,7 +408,7 @@ private struct ConductingRowDetail: View {
                     "Nothing else happens during the administration and passing — no announcements, no music, no other business.",
                     systemImage: "hand.raised"
                 )
-                .font(.system(size: 14 * fontScale))
+                .font(.system(size: 14 * textScale))
                 .foregroundStyle(.secondary)
             }
 
@@ -385,7 +424,7 @@ private struct ConductingRowDetail: View {
                 }
                 .buttonStyle(.bordered)
             }
-            .font(.system(size: 17 * fontScale))
+            .font(.system(size: 17 * textScale))
             .controlSize(.large)
         }
     }
@@ -402,10 +441,10 @@ private struct ConductingRowDetail: View {
                 } label: {
                     HStack(alignment: .firstTextBaseline, spacing: 12) {
                         Image(systemName: entry.isChecked ? "checkmark.square.fill" : "square")
-                            .font(.system(size: 22 * fontScale))
+                            .font(.system(size: 22 * textScale))
                             .foregroundStyle(entry.isChecked ? .green : .secondary)
                         Text(entry.text)
-                            .font(.system(size: 18 * fontScale))
+                            .font(.system(size: 18 * textScale))
                             .strikethrough(entry.isChecked)
                             .foregroundStyle(entry.isChecked ? .secondary : .primary)
                         Spacer(minLength: 0)

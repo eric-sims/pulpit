@@ -55,6 +55,13 @@ Expect `** TEST SUCCEEDED **` and five PNGs.
 | `driver.sh flow <name>` | run `flows/<name>.swift` against the installed app |
 | `driver.sh smoke` | build + reset + `flow outstanding` |
 
+`flow` runs against whatever is **installed**, so `build` alone won't pick up your edits — follow it
+with `install` (or `reset`, which also wipes the store).
+
+Besides `outstanding`, there are `higcheck` (photographs each screen's toolbars and bars) and
+`dynamictype` (relaunches the conducting view at two system text sizes and asserts the text grew).
+Both expect a meeting to exist; `higcheck` plans one, so run it first.
+
 Artifacts land in `.build-artifacts/` (gitignored): `<flow>/*.png`, `<flow>/*.txt`,
 `<flow>.xcresult`.
 
@@ -123,8 +130,10 @@ cd PulpitKit && swift test
 - **SwiftData survives reinstall-free runs.** A flow that plans a meeting will find the last run's
   meetings on the next launch and match the wrong row. `driver.sh reset` (uninstall + install)
   before any flow that creates data; `smoke` already does.
-- **Curly quotes in labels.** The roster picker's one-off button reads `Use “Mark Nielsen” just
-  this once` with typographic quotes. Match with a `CONTAINS` predicate on a plain-ASCII tail.
+- **Curly quotes in labels.** The roster picker's one-off button reads `Use “Mark Nielsen” Just
+  This Once` with typographic quotes. Match with a `CONTAINS` predicate on a plain-ASCII tail.
+- **Control labels are title case.** Buttons, menu items and toggles use title-style capitalization
+  throughout, per HIG. A query for `Family confirmed` finds nothing; it's `Family Confirmed`.
 - **Screenshots don't land on disk by themselves.** `XCTAttachment` goes into the `.xcresult` under
   a UUID filename; `driver.sh` runs `xcresulttool export attachments` and renames them from
   `manifest.json`. Attachments need `lifetime = .keepAlways` or they're dropped on success.
