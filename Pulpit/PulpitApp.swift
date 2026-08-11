@@ -59,10 +59,16 @@ struct RootView: View {
                     ImportPreviewView(result: pending)
                 }
             }
-            .alert("Couldn't Open File", isPresented: .constant(inbox.errorMessage != nil)) {
-                Button("OK") { inbox.errorMessage = nil }
-            } message: {
-                Text(inbox.errorMessage ?? "")
+            // `presenting:` hands the message to the alert, so it survives the dismissal
+            // animation instead of blanking the moment the error clears.
+            .alert(
+                "Couldn't Open File",
+                isPresented: $inbox.isShowingError,
+                presenting: inbox.errorMessage
+            ) { _ in
+                Button("OK") {}
+            } message: { message in
+                Text(message)
             }
     }
 

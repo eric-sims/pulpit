@@ -169,6 +169,12 @@ struct SettingsView: View {
     @State private var exported: ExportedFile?
     @State private var errorMessage: String?
 
+    /// Whether the failure alert is up. Settable, so the `false` SwiftUI writes on dismissal
+    /// clears the error instead of being dropped. See `ImportInbox.isShowingError`.
+    private var isShowingError: Binding<Bool> {
+        Binding(get: { errorMessage != nil }, set: { if !$0 { errorMessage = nil } })
+    }
+
     var body: some View {
         NavigationStack {
             Form {
@@ -213,10 +219,10 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .sheet(item: $exported) { ShareSheet(url: $0.url) }
-            .alert("Export Failed", isPresented: .constant(errorMessage != nil)) {
-                Button("OK") { errorMessage = nil }
-            } message: {
-                Text(errorMessage ?? "")
+            .alert("Export Failed", isPresented: isShowingError, presenting: errorMessage) { _ in
+                Button("OK") {}
+            } message: { message in
+                Text(message)
             }
         }
     }
