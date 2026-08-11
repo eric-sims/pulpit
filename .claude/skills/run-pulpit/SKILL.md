@@ -67,6 +67,10 @@ A flow is one `XCTestCase` in `flows/<name>.swift`. `driver.sh flow` copies it t
 builds. Copy `flows/outstanding.swift`; it exercises the wizard, the roster picker, a Form toggle,
 the outline and a sheet, which is most of the app's interaction vocabulary.
 
+`flows/importerror.swift` covers the other entry point: it writes an unreadable `.pulpitplan` and
+hands it over with `XCUIDevice.shared.system.open`, which reaches `onOpenURL` the same way AirDrop
+or Messages would. Copy it when you need the app to receive a file.
+
 `uitest/SPUITests/Support.swift` holds the helpers, each one encoding a trap from the Gotchas below:
 
 | helper | why it exists |
