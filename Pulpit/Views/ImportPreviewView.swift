@@ -75,6 +75,7 @@ struct ImportPreviewView: View {
                     }
                 }
             }
+            .templeCanvas()
             .navigationTitle("Import Meeting")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

@@ -33,6 +33,8 @@ struct NewMeetingWizard: View {
                     BasicsStep(date: $date, kind: $kind, unitName: $unitName)
                 }
             }
+            // One canvas for every step: `scrollContentBackground` reaches the Forms inside.
+            .templeCanvas()
             .navigationTitle(meeting == nil ? "New Meeting" : steps[step].title)
             // A large title, because the step titles are whole questions. Inline, they shared the
             // bar with Back, Cancel and Next and truncated to "What are the s…"; on their own line

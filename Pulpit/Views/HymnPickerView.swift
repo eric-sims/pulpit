@@ -61,6 +61,7 @@ struct HymnPickerView: View {
             // than by painting a background behind it. See HIG > Toolbars.
             .scrollEdgeEffectStyle(.hard, for: .top)
             .searchable(text: $query, prompt: "Number or title")
+            .templeCanvas()
             .navigationTitle(item.title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

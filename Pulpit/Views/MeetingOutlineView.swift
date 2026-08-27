@@ -33,6 +33,7 @@ struct MeetingOutlineView: View {
                 PersonRow(label: "Presiding", person: $meeting.presiding)
                 PersonRow(label: "Conducting", person: $meeting.conducting)
             }
+            .listRowBackground(Color.templeCard)
 
             if !meeting.isReady {
                 Section("Outstanding") {
@@ -60,6 +61,7 @@ struct MeetingOutlineView: View {
                         }
                     }
                 }
+                .listRowBackground(Color.templeCard)
             }
 
             Section("Program") {
@@ -72,12 +74,15 @@ struct MeetingOutlineView: View {
                 }
                 .onMove { MeetingFactory.move(in: meeting, from: $0, to: $1) }
                 .onDelete(perform: delete)
+                .listRowBackground(Color.templeCard)
             }
 
             Section {
                 Button("Add Item", systemImage: "plus") { isAddingItem = true }
             }
+            .listRowBackground(Color.templeCard)
         }
+        .templeCanvas()
         .navigationTitle(meeting.date.formatted(.dateTime.month().day().year()))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -143,6 +148,7 @@ struct AddItemSheet: View {
                     }
                 }
             }
+            .templeCanvas()
             .navigationTitle("Add an Item")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

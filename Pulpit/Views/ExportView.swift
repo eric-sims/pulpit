@@ -76,6 +76,7 @@ struct ExportView: View {
                     }
                 }
             }
+            .templeCanvas()
             .navigationTitle("Export")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

@@ -78,6 +78,7 @@ struct ItemDetailView: View {
                     Text("For you. Excluded from shared files unless you say otherwise.")
                 }
             }
+            .templeCanvas()
             .navigationTitle(item.kind.defaultTitle)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -166,6 +167,7 @@ struct ScriptOverrideEditor: View {
                     }
                 }
             }
+            .templeCanvas()
             .navigationTitle("Reword")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

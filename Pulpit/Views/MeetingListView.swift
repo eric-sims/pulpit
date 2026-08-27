@@ -44,17 +44,21 @@ struct MeetingListView: View {
                             Section("Upcoming") {
                                 ForEach(upcoming) { MeetingRow(meeting: $0) }
                                     .onDelete { delete(upcoming, at: $0) }
+                                    .listRowBackground(Color.templeCard)
                             }
                         }
                         if !past.isEmpty {
                             Section("Past") {
                                 ForEach(past) { MeetingRow(meeting: $0) }
                                     .onDelete { delete(past, at: $0) }
+                                    .listRowBackground(Color.templeCard)
                             }
                         }
                     }
+                    .templeCanvas()
                 }
             }
+            .background(Color.templeCanvas)
             .navigationTitle("Meetings")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
@@ -92,8 +96,10 @@ private struct MeetingRow: View {
     var body: some View {
         NavigationLink(destination: MeetingOutlineView(meeting: meeting)) {
             VStack(alignment: .leading, spacing: 4) {
+                // Serif for the date, the way it would be set on a printed program.
                 Text(meeting.date, format: .dateTime.weekday(.wide).month().day().year())
                     .font(.headline)
+                    .fontDesign(.serif)
                 HStack(spacing: 6) {
                     Text(meeting.kind.shortName)
                     if let theme = meeting.theme, !theme.isEmpty {
