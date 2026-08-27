@@ -48,13 +48,26 @@ struct ConductingView: View {
     var body: some View {
         NavigationStack {
             ScrollViewReader { proxy in
-                List {
-                    ForEach(items) { item in
-                        row(for: item, proxy: proxy)
-                            .id(item.id)
+                ScrollView {
+                    // A plain VStack, not a lazy one: a program is a dozen-odd items, and
+                    // `scrollTo` needs every card to exist to land on it reliably.
+                    VStack(alignment: .leading, spacing: 12) {
+                        ForEach(Array(items.enumerated()), id: \.element.id) { index, item in
+                            if index == 0 || items[index - 1].kind.phase != item.kind.phase {
+                                PhaseHeader(phase: item.kind.phase, textScale: textScale)
+                                    .padding(.top, index == 0 ? 0 : 12)
+                            }
+                            card(for: item, proxy: proxy)
+                                .id(item.id)
+                        }
+                        TempleDivider()
+                            .padding(.vertical, 20)
+                            .padding(.horizontal, 48)
                     }
+                    .padding(.horizontal, 16)
+                    .padding(.top, 8)
                 }
-                .listStyle(.plain)
+                .background(Color.templeCanvas)
                 .scrollEdgeEffectStyle(.hard, for: [.top, .bottom])
                 .safeAreaInset(edge: .top) { pinnedActiveBar(proxy: proxy) }
                 .safeAreaInset(edge: .bottom) { progressBar }
@@ -83,10 +96,12 @@ struct ConductingView: View {
         }
     }
 
-    // MARK: - Rows
+    // MARK: - Cards
 
+    /// One program item as a card. The active card is the one the room is on: it carries the
+    /// expanded script, a gold edge, and a little more lift than its neighbours.
     @ViewBuilder
-    private func row(for item: ProgramItem, proxy: ScrollViewProxy) -> some View {
+    private func card(for item: ProgramItem, proxy: ScrollViewProxy) -> some View {
         let isActive = item.id == activeItem?.id
 
         VStack(alignment: .leading, spacing: 0) {
@@ -111,8 +126,26 @@ struct ConductingView: View {
                 .padding(.top, 12)
             }
         }
-        .padding(.vertical, 6)
-        .listRowBackground(isActive ? Color.accentColor.opacity(0.10) : Color.clear)
+        .padding(14)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .fill(Color.templeCard)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .strokeBorder(
+                    isActive ? Color.templeGold : Color.templeHairline,
+                    lineWidth: isActive ? 1.5 : 1
+                )
+        )
+        .shadow(
+            color: .black.opacity(isActive ? 0.10 : 0.04),
+            radius: isActive ? 10 : 4,
+            y: isActive ? 4 : 2
+        )
+        // A resolved card recedes but stays readable — you may need to un-check it.
+        .opacity(item.status.isResolved && !isActive ? 0.8 : 1)
     }
 
     // MARK: - Chrome
@@ -134,7 +167,7 @@ struct ConductingView: View {
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                     Text(item.title)
-                        .font(.system(size: 17 * textScale, weight: .semibold))
+                        .font(.system(size: 17 * textScale, weight: .semibold, design: .serif))
                         .lineLimit(2)
                         // Without this a long title breaks mid-word at accessibility sizes —
                         // "Welco / me" — because one word no longer fits the column.
@@ -288,6 +321,30 @@ struct ConductingView: View {
     }
 }
 
+// MARK: - Phase header
+
+/// A small-caps gold heading over each run of cards — Opening, The Sacrament, Closing — set
+/// like the section titles on a printed program, with a hairline carrying the eye across.
+private struct PhaseHeader: View {
+    let phase: ProgramPhase
+    let textScale: Double
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Text(phase.rawValue)
+                .font(.system(size: 13 * textScale, weight: .semibold, design: .serif))
+                .kerning(1.2)
+                .textCase(.uppercase)
+                .foregroundStyle(Color.templeGold)
+                .fixedSize()
+            Rectangle()
+                .fill(Color.templeGold.opacity(0.30))
+                .frame(height: 1)
+        }
+        .accessibilityAddTraits(.isHeader)
+    }
+}
+
 // MARK: - Row header
 
 private struct ConductingRowHeader: View {
@@ -311,7 +368,7 @@ private struct ConductingRowHeader: View {
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(item.title)
-                    .font(.system(size: 19 * textScale, weight: isActive ? .bold : .medium))
+                    .font(.system(size: 19 * textScale, weight: isActive ? .bold : .medium, design: .serif))
                     .strikethrough(item.status == .skipped)
                     .foregroundStyle(item.status.isResolved && !isActive ? .secondary : .primary)
 
@@ -345,7 +402,7 @@ private struct ConductingRowHeader: View {
         switch item.status {
         case .completed: .green
         case .skipped: .orange
-        case .pending: isActive ? .accentColor : .secondary
+        case .pending: isActive ? .templeGold : .secondary
         }
     }
 
@@ -379,8 +436,10 @@ private struct ConductingRowDetail: View {
             }
 
             if let rendering {
+                // Serif for the words actually spoken aloud — set like the page you'd read
+                // from, distinct from the chrome around it.
                 Text(rendering.attributedString)
-                    .font(.system(size: 20 * textScale))
+                    .font(.system(size: 20 * textScale, design: .serif))
                     .lineSpacing(5 * textScale)
                     .textSelection(.enabled)
             }

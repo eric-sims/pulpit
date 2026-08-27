@@ -89,5 +89,7 @@ struct RootView: View {
         }
         // Gives iPad a sidebar without a second layout to maintain.
         .tabViewStyle(.sidebarAdaptable)
+        // Brass, not the default blue: the accent the whole app inherits, sheets included.
+        .tint(.templeGold)
     }
 }

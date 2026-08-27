@@ -49,10 +49,13 @@ struct RosterView: View {
                         .onDelete { offsets in
                             for index in offsets { context.delete(results[index]) }
                         }
+                        .listRowBackground(Color.templeCard)
                     }
+                    .templeCanvas()
                     .searchable(text: $query, prompt: "Search")
                 }
             }
+            .background(Color.templeCanvas)
             .navigationTitle("Roster")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
@@ -82,10 +85,12 @@ struct ScriptLibraryView: View {
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }
+                .listRowBackground(Color.templeCard)
                 ForEach(ordered) { template in
                     NavigationLink(destination: ScriptTemplateEditor(template: template)) {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(template.kind?.displayName ?? "Script")
+                                .fontDesign(.serif)
                             if template.isUserModified {
                                 Text("Edited by you")
                                     .font(.caption)
@@ -94,7 +99,9 @@ struct ScriptLibraryView: View {
                         }
                     }
                 }
+                .listRowBackground(Color.templeCard)
             }
+            .templeCanvas()
             .navigationTitle("Scripts")
         }
     }
@@ -185,6 +192,7 @@ struct SettingsView: View {
                 } footer: {
                     Text("Used in scripts that name the ward. Each meeting keeps its own copy, so an imported meeting from another ward stays correct.")
                 }
+                .listRowBackground(Color.templeCard)
 
                 Section {
                     Button("Export All Meetings", systemImage: "square.and.arrow.up") { exportBackup() }
@@ -194,6 +202,7 @@ struct SettingsView: View {
                 } footer: {
                     Text("Everything in one file: \(meetings.count) meeting\(meetings.count == 1 ? "" : "s"), your announcements and your scripts. Meetings live only on this device, so this is your only copy off it.")
                 }
+                .listRowBackground(Color.templeCard)
 
                 Section {
                     LabeledContent("Hymns (1985)", value: "341")
@@ -204,6 +213,7 @@ struct SettingsView: View {
                 } footer: {
                     Text("Titles, numbers and sections only. No lyrics or music.")
                 }
+                .listRowBackground(Color.templeCard)
 
                 Section {
                     LabeledContent("App version", value: AppVersion.displayVersion)
@@ -216,7 +226,9 @@ struct SettingsView: View {
                     Text("The build running on this device. Worth quoting if you report a problem — press and hold to copy.")
                 }
                 .textSelection(.enabled)
+                .listRowBackground(Color.templeCard)
             }
+            .templeCanvas()
             .navigationTitle("Settings")
             .sheet(item: $exported) { ShareSheet(url: $0.url) }
             .alert("Export Failed", isPresented: isShowingError, presenting: errorMessage) { _ in

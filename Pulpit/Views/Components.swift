@@ -331,8 +331,10 @@ struct OutlineRow: View {
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
             VStack(alignment: .leading, spacing: 3) {
+                // Serif, echoing the printed program the outline stands in for.
                 Text(item.title)
                     .font(.body)
+                    .fontDesign(.serif)
                 if let detail = detailText {
                     Text(detail)
                         .font(.subheadline)

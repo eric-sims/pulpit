@@ -85,6 +85,7 @@ struct PersonPickerView: View {
                 }
             }
             .searchable(text: $query, prompt: "Search the roster")
+            .templeCanvas()
             .navigationTitle("Choose a Person")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -155,6 +156,7 @@ struct PersonEditorView: View {
                     Text("Private. Notes on people never leave this device — shared files have no field for them.")
                 }
             }
+            .templeCanvas()
             .navigationTitle(person == nil ? "New Person" : "Edit Person")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
